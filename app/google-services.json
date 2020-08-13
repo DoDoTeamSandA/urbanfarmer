@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "630422836879",
+    "firebase_url": "https://urbanfarmer-5a4b8.firebaseio.com",
+    "project_id": "urbanfarmer-5a4b8",
+    "storage_bucket": "urbanfarmer-5a4b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630422836879:android:8efc1168269368173c02fa",
+        "android_client_info": {
+          "package_name": "com.dodo.urbanfarmer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630422836879-5a45inti9tt0kv1q7tmnic16664ku5qc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dodo.urbanfarmer",
+            "certificate_hash": "ff7ae9b4b863d08a500e2a8a7a5c239fd3866da3"
+          }
+        },
+        {
+          "client_id": "630422836879-o7pblp008c8hjpajdj4a9aq0pi0ao52f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEKcG3GLclc93tMrHRakRMRXibGkf70zA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630422836879-o7pblp008c8hjpajdj4a9aq0pi0ao52f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
