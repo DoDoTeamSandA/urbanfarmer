@@ -15,6 +15,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:inputType="phone"
+        android:textColor="#E5C09D"
+        android:gravity="center"
         android:layout_marginStart="91dp"
         android:layout_marginTop="308dp"
         android:backgroundTint="#E5C09D"
