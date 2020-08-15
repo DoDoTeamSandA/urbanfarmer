@@ -50,7 +50,7 @@ public class OTPVerification extends AppCompatActivity {
 
         sendVerificationCode(mobileNumber);
 
-        //sai
+
 
 
         verify.setOnClickListener(new View.OnClickListener() {
