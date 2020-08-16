@@ -24,7 +24,7 @@
             android:gravity="center"
             android:paddingTop="30dp"
             android:text="LOGIN"
-            android:textColor="#E5C09D"
+            android:textColor="#E6DCDC"
             android:textSize="50dp" />
     </RelativeLayout>
 
@@ -66,46 +66,61 @@
             android:inputType="textPassword"
             android:textColor="#E5C09D"
             android:textColorHint="#E5C09D" />
-
-        <Button
-            android:id="@+id/login"
+        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/border"
-            android:text="LOGIN"
-            android:textSize="20dp" />
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#E5C09D"
+            android:textSize="18dp"
+            android:buttonTint="#E5C09D"
+            android:text="Show password"/>
 
         <TextView
             android:id="@+id/forgotpassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginLeft="74dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="Forgot Password?"
             android:textColor="#E5C09D"
-            android:textSize="21dp" />
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:background="@drawable/border"
+            android:text="LOGIN"
+            android:textSize="20dp" />
+
 
         <TextView
             android:id="@+id/RegiterText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:text="Register"
             android:textColor="#E5C09D"
-            android:textSize="21dp" />
+            android:textSize="23dp" />
+        <TableRow
+            android:id="@+id/hr"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:paddingTop="10dp"
+            android:layout_marginTop="40dp"
+            android:background="#E6DCDC">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="OR"
-            android:textColor="#E6DCDC"
-            android:textSize="25dp" />
+        </TableRow>
+
 
         <TextView
             android:layout_width="match_parent"
@@ -113,20 +128,23 @@
             android:layout_gravity="center"
             android:layout_marginLeft="55dp"
             android:id="@+id/mobilenumber"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
+            android:paddingBottom="10dp"
             android:layout_marginRight="55dp"
-            android:background="@drawable/border"
             android:gravity="center"
             android:text="Login With Mobile Number"
-            android:textColor="@color/colorblue"
+            android:textColor="#E5C09D"
             android:textSize="21dp"
             android:textStyle="bold" />
+
+
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="OR"
             android:textColor="#E6DCDC"
             android:textSize="25dp" />
