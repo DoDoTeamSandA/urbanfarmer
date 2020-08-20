@@ -21,15 +21,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.util.regex.Pattern;
 
 public class Register extends AppCompatActivity {
-
     private EditText email,password;
     private Button registerbtn;
-
     FirebaseAuth mAuth;
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,30 +47,19 @@ public class Register extends AppCompatActivity {
 
                 //fecthing text from editText
 
-                String emailText=email.getText().toString();
-                String passwordText=password.getText().toString();
+                String emailText = email.getText().toString();
+                String passwordText = password.getText().toString();
 
                 //checking for null pointer exception
-                if(TextUtils.isEmpty(emailText) || !Patterns.EMAIL_ADDRESS.matcher(emailText).find()){
+                if (TextUtils.isEmpty(emailText) || !Patterns.EMAIL_ADDRESS.matcher(emailText).find()) {
                     email.setError("Please fill");
-                }else if(TextUtils.isEmpty(passwordText) || passwordText.length()<6){
+                } else if (TextUtils.isEmpty(passwordText) || passwordText.length() < 6) {
                     password.setError("Please fill and length should be more than 6");
-                }else{
+                } else {
 
-                    newUserRegistration(emailText,passwordText);
-
-
+                    newUserRegistration(emailText, passwordText);
                 }
-
-
-
-
                 //Method to create new user
-
-
-
-
-
             }
 
             private void newUserRegistration(String emailText, String passwordText) {

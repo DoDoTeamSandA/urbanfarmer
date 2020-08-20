@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Sign Out"
+        android:icon="@drawable/ic_baseline_power_settings_new_24"
+        android:id="@+id/signout" />
+    <item android:title="About Us"
+        android:icon="@drawable/ic_baseline_assessment_24"
+        android:id="@+id/aboutus" />
+    <item android:title="Privacy Policy"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:id="@+id/privacypolicy" />
+    <item android:title="go to website.."
+        android:icon="@drawable/ic_baseline_public_24"
+        android:id="@+id/report" />
+    <item android:title="contact us"
+        android:icon="@drawable/ic_baseline_mail_outline_24"
+        android:id="@+id/contactus"/>
+
+</menu>

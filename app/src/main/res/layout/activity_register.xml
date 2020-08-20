@@ -4,8 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorblue"
+    android:background="@drawable/urbanfarmerbg7"
     tools:context=".Register">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="#7A474747"/>
 
 
     <RelativeLayout
@@ -25,41 +29,66 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_gravity="center"
+            android:padding="10dp"
+            android:drawablePadding="10dp"
+            android:textColor="#123"
+            android:textColorHint="#123"
+            android:drawableStart="@drawable/ic_baseline_email_24"
             android:layout_marginStart="60dp"
+            android:background="@drawable/input_file"
             android:layout_marginTop="225dp"
-            android:backgroundTint="#E5C09D"
+            android:backgroundTint="#fff"
+
             android:hint="EMAIL"
-            android:inputType="textEmailAddress"
-            android:textColor="#E5C09D"
-            android:textColorHint="#E5C09D" />
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="288dp"
             android:layout_height="wrap_content"
-
+            android:drawableStart="@drawable/ic_baseline_https_24"
             android:layout_alignParentTop="true"
             android:layout_marginStart="60dp"
             android:layout_marginTop="290dp"
-            android:backgroundTint="#E5C09D"
+            android:backgroundTint="#fff"
+            android:padding="10dp"
+            android:drawablePadding="10dp"
+            android:background="@drawable/input_file"
             android:hint="PASSWORD"
+            android:textColor="#123"
+            android:textColorHint="#123"
             android:inputType="textPassword"
-            android:textColor="#E5C09D"
-            android:textColorHint="#E5C09D" />
+             />
 
         <Button
             android:id="@+id/registerbtn"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_gravity="center"
-            android:layout_marginStart="157dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
             android:layout_marginTop="400dp"
-            android:background="#E5C09D"
+            android:background="@drawable/border"
             android:text="REGISTER"
-            android:textColor="#111"
+            android:textColor="#123"
             android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/seller_registration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/registerbtn"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="center"
+            android:text="Are you Intrested To sell in our app? click here to Register"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -70,7 +99,7 @@
             android:layout_marginTop="40dp"
             android:fontFamily="@font/fanwood_text"
             android:text="Register"
-            android:textColor="#E6DCDC"
+            android:textColor="#FFFFFF"
             android:textSize="60dp" />
 
     </RelativeLayout>

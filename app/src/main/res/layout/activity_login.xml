@@ -4,13 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorblue"
+    android:background="@drawable/urbanfarmerbg3"
     android:orientation="vertical"
     tools:context=".Login">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="#7A474747"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +34,7 @@
             android:gravity="center"
             android:paddingTop="30dp"
             android:text="LOGIN"
-            android:textColor="#E6DCDC"
+            android:textColor="#FFFFFF"
             android:textSize="50dp" />
     </RelativeLayout>
 
@@ -46,12 +56,16 @@
             android:layout_marginLeft="70dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="70dp"
-            android:backgroundTint="#E5C09D"
+            android:background="@drawable/input_file"
+            android:backgroundTint="#E6DCDC "
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="10dp"
             android:gravity="start"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:textColor="#E5C09D"
-            android:textColorHint="#E5C09D" />
+            android:padding="10dp"
+            android:textColor="#123"
+            android:textColorHint="#123" />
 
         <EditText
             android:id="@+id/password"
@@ -60,21 +74,26 @@
             android:layout_marginLeft="70dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="70dp"
-            android:backgroundTint="#E5C09D"
+            android:background="@drawable/input_file"
+            android:backgroundTint="#E6DCDC"
+            android:drawableStart="@drawable/ic_baseline_https_24"
+            android:drawablePadding="10dp"
             android:gravity="start"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColor="#E5C09D"
-            android:textColorHint="#E5C09D" />
+            android:padding="10dp"
+            android:textColor="#123"
+            android:textColorHint="#123" />
+
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="16dp"
-            android:textColor="#E5C09D"
-            android:textSize="18dp"
             android:buttonTint="#E5C09D"
-            android:text="Show password"/>
+            android:text="Show password"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp" />
 
         <TextView
             android:id="@+id/forgotpassword"
@@ -84,7 +103,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="Forgot Password?"
-            android:textColor="#E5C09D"
+            android:textColor="#FFFFFFFF"
             android:textSize="20dp" />
 
         <Button
@@ -92,8 +111,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
             android:layout_marginLeft="75dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="75dp"
             android:background="@drawable/border"
             android:text="LOGIN"
@@ -107,54 +126,44 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:text="Register"
-            android:textColor="#E5C09D"
+            android:textColor="#FFFFFF"
             android:textSize="23dp" />
+
         <TableRow
             android:id="@+id/hr"
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
-            android:paddingTop="10dp"
             android:layout_marginTop="40dp"
-            android:background="#E6DCDC">
+            android:layout_marginRight="30dp"
+            android:background="#f5f5dc"
+            android:paddingTop="10dp">
 
         </TableRow>
 
 
         <TextView
+            android:id="@+id/mobilenumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="55dp"
-            android:id="@+id/mobilenumber"
-            android:layout_marginTop="30dp"
-            android:paddingBottom="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="55dp"
             android:gravity="center"
+            android:paddingBottom="20dp"
             android:text="Login With Mobile Number"
-            android:textColor="#E5C09D"
-            android:textSize="21dp"
+            android:fontFamily="@font/fanwood_text"
+            android:textColor="#FFFFFF85"
+            android:textSize="25dp"
             android:textStyle="bold" />
-
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="OR"
-            android:textColor="#E6DCDC"
-            android:textSize="25dp" />
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/sign_in_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="15dp" />
 
 
     </LinearLayout>
