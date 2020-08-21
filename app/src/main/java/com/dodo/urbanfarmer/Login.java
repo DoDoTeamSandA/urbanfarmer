@@ -13,6 +13,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -43,6 +49,8 @@ public class Login extends AppCompatActivity {
 
         private static final int signCode = 0007;
 
+        private CallbackManager callbackManager;
+
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +61,16 @@ public class Login extends AppCompatActivity {
             mAuth = FirebaseAuth.getInstance();
             Resetpassword =(TextView) findViewById(R.id.forgotpassword);
             RegisterText = (TextView) findViewById(R.id.RegiterText);
+
+            LoginButton loginButton=findViewById(R.id.login_button);
+            callbackManager=CallbackManager.Factory.create();
+
+            loginButton.setReadPermissions("public_profile","email", "user_birthday", "user_friends");
+
+
+/*
             phoneloginTxt = (TextView) findViewById(R.id.mobilenumber);
+*/
             UsernameET = (EditText) findViewById(R.id.email);
             PasswaordET = (EditText) findViewById(R.id.password);
             login = (Button) findViewById(R.id.login);
@@ -95,6 +112,29 @@ public class Login extends AppCompatActivity {
                 }
             });
 
+
+            loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+                @Override
+                public void onSuccess(LoginResult loginResult) {
+                    Toast.makeText(Login.this, "log in", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+                    startActivity(intent);
+                }
+
+                @Override
+                public void onCancel() {
+
+                }
+
+                @Override
+                public void onError(FacebookException error) {
+
+                }
+            });
+
             GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                     .requestIdToken(getString(R.string.Web_ClientId)).requestEmail().build();
 
@@ -107,6 +147,22 @@ public class Login extends AppCompatActivity {
 
                 }
             });
+            loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+                @Override
+                public void onSuccess(LoginResult loginResult) {
+                    Toast.makeText(Login.this, "log in", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancel() {
+
+                }
+
+                @Override
+                public void onError(FacebookException error) {
+
+                }
+            });
 
 
             RegisterText.setOnClickListener(new View.OnClickListener() {
@@ -116,13 +172,13 @@ public class Login extends AppCompatActivity {
                 }
             });
 
-            phoneloginTxt.setOnClickListener(new View.OnClickListener() {
+          /*  phoneloginTxt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(Login.this, Otplogin.class));
 
                 }
-            });
+            });*/
             Resetpassword.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -137,6 +193,9 @@ public class Login extends AppCompatActivity {
         @Override
         protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
             super.onActivityResult(requestCode, resultCode, data);
+
+            callbackManager.onActivityResult(requestCode, resultCode, data);
+
 
             if (requestCode == signCode) {
                 Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
@@ -181,6 +240,16 @@ public class Login extends AppCompatActivity {
             if (user != null) {
                 startActivity(new Intent(Login.this, MainActivity.class));
             }
+
+            AccessToken accessToken=AccessToken.getCurrentAccessToken();
+            if(accessToken!=null){
+
+                Intent intent = new Intent(Login.this, MainActivity.class);
+                intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP | intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+
+            }
+
 
         }
     }

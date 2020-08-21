@@ -142,7 +142,7 @@
         </TableRow>
 
 
-        <TextView
+       <!-- <TextView
             android:id="@+id/mobilenumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -156,7 +156,15 @@
             android:fontFamily="@font/fanwood_text"
             android:textColor="#FFFFFF85"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="bold" />-->
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp" />
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/sign_in_button"

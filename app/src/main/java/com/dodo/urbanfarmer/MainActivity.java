@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         mAuth.signOut();
         signOut();
         sendToLogin();
+        LoginManager.getInstance().logOut();
     }
     private void sendToLogin() {
         if (mAuth.getCurrentUser() == null) {
