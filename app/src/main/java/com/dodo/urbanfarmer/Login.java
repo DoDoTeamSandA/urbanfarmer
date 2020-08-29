@@ -60,7 +60,7 @@ public class Login extends AppCompatActivity {
 
             mAuth = FirebaseAuth.getInstance();
             Resetpassword =(TextView) findViewById(R.id.forgotpassword);
-            RegisterText = (TextView) findViewById(R.id.RegiterText);
+            RegisterText = (TextView) findViewById(R.id.RegisterText);
 
             LoginButton loginButton=findViewById(R.id.login_button);
             callbackManager=CallbackManager.Factory.create();
