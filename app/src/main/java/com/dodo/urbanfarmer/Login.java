@@ -41,7 +41,7 @@ public class Login extends AppCompatActivity {
         FirebaseAuth mAuth;
         private EditText UsernameET, PasswaordET;
         private Button login;
-
+/*
         private SignInButton GSignIn;
 
         private GoogleSignInClient mGoogleSignInClient;
@@ -49,7 +49,7 @@ public class Login extends AppCompatActivity {
 
         private static final int signCode = 0007;
 
-        private CallbackManager callbackManager;
+        private CallbackManager callbackManager;*/
 
 
         @Override
@@ -62,10 +62,9 @@ public class Login extends AppCompatActivity {
             Resetpassword =(TextView) findViewById(R.id.forgotpassword);
             RegisterText = (TextView) findViewById(R.id.RegisterText);
 
-            LoginButton loginButton=findViewById(R.id.login_button);
+         /*   LoginButton loginButton=findViewById(R.id.login_button);
             callbackManager=CallbackManager.Factory.create();
-
-            loginButton.setReadPermissions("public_profile","email", "user_birthday", "user_friends");
+            loginButton.setReadPermissions("public_profile","email", "user_birthday", "user_friends");*/
 
 
 /*
@@ -74,7 +73,11 @@ public class Login extends AppCompatActivity {
             UsernameET = (EditText) findViewById(R.id.email);
             PasswaordET = (EditText) findViewById(R.id.password);
             login = (Button) findViewById(R.id.login);
+/*
             GSignIn = (SignInButton) findViewById(R.id.sign_in_button);
+*/
+
+           // Log in with pasword and username
 
             login.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -97,10 +100,8 @@ public class Login extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(Login.this, "Logedin Sucessfully", Toast.LENGTH_SHORT).show();
 
-                                    Intent intent = new Intent(Login.this, MainActivity.class);
-                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    ManiScreen();
 
-                                    startActivity(intent);
 
                                 } else {
                                     Toast.makeText(Login.this, "Username and Password Doesn't Matches", Toast.LENGTH_SHORT).show();
@@ -113,7 +114,7 @@ public class Login extends AppCompatActivity {
             });
 
 
-            loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+          /*  loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
                     Toast.makeText(Login.this, "log in", Toast.LENGTH_SHORT).show();
@@ -133,9 +134,9 @@ public class Login extends AppCompatActivity {
                 public void onError(FacebookException error) {
 
                 }
-            });
+            });*/
 
-            GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+           /* GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                     .requestIdToken(getString(R.string.Web_ClientId)).requestEmail().build();
 
             mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
@@ -162,7 +163,7 @@ public class Login extends AppCompatActivity {
                 public void onError(FacebookException error) {
 
                 }
-            });
+            });*/
 
 
             RegisterText.setOnClickListener(new View.OnClickListener() {
@@ -190,7 +191,7 @@ public class Login extends AppCompatActivity {
 
         }
 
-        @Override
+      /*  @Override
         protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
             super.onActivityResult(requestCode, resultCode, data);
 
@@ -208,9 +209,9 @@ public class Login extends AppCompatActivity {
 
                 }
             }
-        }
+        }*/
 
-        private void firebaseAuthWithGoogle(final String idToken) {
+       /* private void firebaseAuthWithGoogle(final String idToken) {
             AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
             mAuth.signInWithCredential(credential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
@@ -223,12 +224,14 @@ public class Login extends AppCompatActivity {
                     }
                 }
             });
-        }
+        }*/
+/*
 
         private void signIn() {
             Intent signInIntent = mGoogleSignInClient.getSignInIntent();
             startActivityForResult(signInIntent, signCode);
         }
+*/
 
 
         @Override
@@ -238,17 +241,23 @@ public class Login extends AppCompatActivity {
             FirebaseUser user = mAuth.getCurrentUser();
 
             if (user != null) {
-                startActivity(new Intent(Login.this, MainActivity.class));
+                ManiScreen();
             }
 
             AccessToken accessToken=AccessToken.getCurrentAccessToken();
             if(accessToken!=null){
 
-                Intent intent = new Intent(Login.this, MainActivity.class);
-                intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP | intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-
+               ManiScreen();
             }
+
+
+        }
+
+        public void ManiScreen(){
+
+            startActivity(new Intent(Login.this,MainActivity.class));
+            finish();
+
 
 
         }
