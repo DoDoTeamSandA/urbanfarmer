@@ -38,7 +38,7 @@ public class Register extends AppCompatActivity {
     private EditText email,password;
     private Button registerbtn;
     FirebaseAuth mAuth;
-
+    private TextView RegisterAlready;
 
     private SignInButton GSignIn;
 
@@ -60,7 +60,7 @@ public class Register extends AppCompatActivity {
         // Binding UI with java instances
         email=(EditText)findViewById(R.id.email);
         password=(EditText)findViewById(R.id.password);
-
+        RegisterAlready =(TextView)findViewById(R.id.RegisterAlready);
         registerbtn=(Button)findViewById(R.id.registerbtn);
         GSignIn = (SignInButton) findViewById(R.id.sign_in_button);
 
@@ -154,6 +154,13 @@ public class Register extends AppCompatActivity {
             }
 
 
+        });
+        RegisterAlready.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Register.this,Login.class);
+                startActivity(intent);
+            }
         });
 
     }
