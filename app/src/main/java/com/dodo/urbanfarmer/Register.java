@@ -40,7 +40,9 @@ public class Register extends AppCompatActivity {
     FirebaseAuth mAuth;
     private TextView RegisterAlready;
 
+/*
     private SignInButton GSignIn;
+*/
 
     private GoogleSignInClient mGoogleSignInClient;
 
@@ -62,11 +64,12 @@ public class Register extends AppCompatActivity {
         password=(EditText)findViewById(R.id.password);
         RegisterAlready =(TextView)findViewById(R.id.RegisterAlready);
         registerbtn=(Button)findViewById(R.id.registerbtn);
-        GSignIn = (SignInButton) findViewById(R.id.sign_in_button);
+        //GSignIn = (SignInButton) findViewById(R.id.sign_in_button);
 
 
 
         // Facebook login
+/*
 
         LoginButton loginButton=findViewById(R.id.login_button);
         callbackManager=CallbackManager.Factory.create();
@@ -96,10 +99,11 @@ public class Register extends AppCompatActivity {
 
             }
         });
+*/
 
 
   //Google Login
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+       /* GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.Web_ClientId)).requestEmail().build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
@@ -126,7 +130,7 @@ public class Register extends AppCompatActivity {
             public void onError(FacebookException error) {
 
             }
-        });
+        });*/
 
 
 

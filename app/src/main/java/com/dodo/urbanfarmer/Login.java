@@ -42,14 +42,14 @@ public class Login extends AppCompatActivity {
         private EditText UsernameET, PasswaordET;
         private Button login;
 
-       // private SignInButton GSignIn;
+        private SignInButton GSignIn;
 
-       // private GoogleSignInClient mGoogleSignInClient;
+       private GoogleSignInClient mGoogleSignInClient;
 
 
-      //  private static final int signCode = 0007;
+       private static final int signCode = 0007;
 
-     //   private CallbackManager callbackManager;
+      private CallbackManager callbackManager;
 
 
         @Override
@@ -62,9 +62,9 @@ public class Login extends AppCompatActivity {
             Resetpassword =(TextView) findViewById(R.id.forgotpassword);
             RegisterText = (TextView) findViewById(R.id.RegisterText);
 
-          // LoginButton loginButton=findViewById(R.id.login_button);
-           // callbackManager=CallbackManager.Factory.create();
-           // loginButton.setReadPermissions("public_profile","email", "user_birthday", "user_friends");
+           LoginButton loginButton=findViewById(R.id.login_button);
+           callbackManager=CallbackManager.Factory.create();
+           loginButton.setReadPermissions("public_profile","email", "user_birthday", "user_friends");
 
 
 /*
@@ -74,15 +74,16 @@ public class Login extends AppCompatActivity {
             PasswaordET = (EditText) findViewById(R.id.password);
             login = (Button) findViewById(R.id.login);
 
-          //  GSignIn = (SignInButton) findViewById(R.id.sign_in_button);
+          GSignIn = (SignInButton) findViewById(R.id.sign_in_button);
 
-           // Log in with pasword and username
+           // Log in with password and username
 
             login.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     String username = UsernameET.getText().toString();
                     String password = PasswaordET.getText().toString();
+
 
                     if (username.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(username).find()) {
                         UsernameET.setError("Please Enter Valid Eamil Address");
@@ -113,7 +114,10 @@ public class Login extends AppCompatActivity {
             });
 
 
-         /*  loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            //Facebook Login
+
+
+          loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
                     Toast.makeText(Login.this, "log in", Toast.LENGTH_SHORT).show();
@@ -133,9 +137,11 @@ public class Login extends AppCompatActivity {
                 public void onError(FacebookException error) {
 
                 }
-            });*/
+            });
 
-          /* GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+          //Google login
+
+          GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                     .requestIdToken(getString(R.string.Web_ClientId)).requestEmail().build();
 
             mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
@@ -162,7 +168,7 @@ public class Login extends AppCompatActivity {
                 public void onError(FacebookException error) {
 
                 }
-            });*/
+            });
 
 
             RegisterText.setOnClickListener(new View.OnClickListener() {
@@ -172,13 +178,13 @@ public class Login extends AppCompatActivity {
                 }
             });
 
-            phoneloginTxt.setOnClickListener(new View.OnClickListener() {
+           /* phoneloginTxt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(Login.this, Otplogin.class));
 
                 }
-            });
+            });*/
             Resetpassword.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -190,7 +196,7 @@ public class Login extends AppCompatActivity {
 
         }
 
-  /*     @Override
+      @Override
         protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
            super.onActivityResult(requestCode, resultCode, data);
 
@@ -223,13 +229,13 @@ public class Login extends AppCompatActivity {
                     }
                 }
             });
-        }*/
+        }
 
 
-       /* private void signIn() {
+       private void signIn() {
             Intent signInIntent = mGoogleSignInClient.getSignInIntent();
             startActivityForResult(signInIntent, signCode);
-        }*/
+        }
 
 
 
