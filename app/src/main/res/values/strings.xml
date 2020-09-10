@@ -4,5 +4,7 @@
     <string name="Web_ClientId">630422836879-o7pblp008c8hjpajdj4a9aq0pi0ao52f.apps.googleusercontent.com</string>
     <string name="facebook_app_id">3856797794349280</string>
     <string name="fb_login_protocol_scheme">fb3856797794349280</string>
-    <string name="Address" >Home Address</string>
+    <string name="Address">Home Address</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

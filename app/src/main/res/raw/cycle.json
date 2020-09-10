@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <script>
+window.dataLayer = window.dataLayer || [];
+dataLayer = [{"user_id":329231}];
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NGWCJJQ');</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="csrf-token" content="QVauPTJlSDG0aRvCH0sBSwlvqUOQK7joCAFsLrku"/>
+    <meta name="assets-path" content="https://assets2.lottiefiles.com"/>
+    <meta name="static-path" content="https://static1.lottiefiles.com"/>
+
+    <meta name="content-language" content="en">
+    <meta name='locale' content='en'/>
+
+    <meta name="active-entry" content="793-cycle-animation" />
+    <link rel="alternate" type="application/rss+xml" href="https://lottiefiles.com/feed" title="Recent Lottie Animations from Community">
+    <link rel="alternate" type="application/rss+xml" href="https://lottiefiles.com/feed/popular" title="Popular Lottie Animations from Community">
+
+    <title>Cycle Animation on Lottiefiles. Free Lottie Animation</title>
+<meta name="description" content="LottieFiles is a collection of animations designed for Lottie - gone are the days of bugging your developer">
+<meta property="fb:app_id" content="248901868952592">
+    <meta property="og:title" content="Cycle Animation on Lottiefiles. Free Lottie Animation" />
+<meta property="og:site_name" content="LottieFiles" />
+<meta property="og:type" content="video.other" />
+<meta property="og:description" content="LottieFiles is a collection of animations designed for Lottie - gone are the days of bugging your developer" />
+<meta property="og:url" content="https://lottiefiles.com/793-cycle-animation" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image" content="https://static.lottiefiles.com/images/og_img.jpg" />
+<meta property="og:video" content="https://assets.lottiefiles.com/render/jum1pgm3.mp4" />
+<meta property="og:video:url" content="https://assets.lottiefiles.com/render/jum1pgm3.mp4" />
+<meta property="og:video:secure_url" content="https://assets.lottiefiles.com/render/jum1pgm3.mp4" />
+<meta property="og:video:type" content="video/mp4" />
+<meta property="og:video:width" content="640" />
+<meta property="og:video:height" content="640" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@LottieFiles" />
+<meta name="twitter:title" content="Cycle Animation on Lottiefiles. Free Lottie Animation" />
+
+    <link rel="stylesheet" href="https://static4.lottiefiles.com/css/app.19f88c.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
+
+    
+    
+            <script>
+    let domain = '';
+    let email = '';
+    let name = '';
+    let isLoggedIn = "1";
+    let user_segment = '';
+
+    if (isLoggedIn.length > 0) {
+        email = "saisreedhar2001@gmail.com";
+        name = "Sai Sree";
+
+        if (email.length > 0) {
+            domain = email.substring(email.lastIndexOf("@") + 1);
+        }
+
+        user_segment = "Developer";
+    }
+
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init("mAMBIp0g-TSG-W7Bk0VsUh6radRqiX0zvDzC5yUbEd0", {
+        api_host: "https://analytics.lottiefiles.com",
+        loaded: function (posthog) {
+            posthog.identify('329231');
+            posthog.people.set({
+                'email': email,
+                '$name': name,
+                '$email_domain': domain,
+                '$user_segment': user_segment
+            });
+        }
+    });
+</script>
+        <!-- Hotjar Tracking Code for https://lottiefiles.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1174719,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+    </head>
+
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGWCJJQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="app">
+    <div class="bg-lf-bg relative z-20 flex items-center xl:h-16">
+            
+            <header class="container mx-auto">
+                <nav class="flex items-center justify-between flex-wrap xl:py-0 pt-0">
+                    <div class="flex items-center flex-no-shrink text-white m-2 xl:m-0 xl:mr-6">
+                        <a href="https://lottiefiles.com" title="LottieFiles">
+                            <img src="https://static4.lottiefiles.com/images/svg/lottiefiles_logo.svg" alt="LottieFiles Logo"
+                                class="h-8 lg:w-36">
+                        </a>
+                    </div>
+                    <div class="flex flex-row xl:hidden m-2 xl:m-0 overflow-hidden ">
+                        <toggle-nav size="mini"></toggle-nav>
+                    </div>
+                    <div id="main-nav"
+                        class="trans hidden w-full block justify-between flex-grow xl:flex xl:items-center xl:w-auto px-2 xl:p-0">
+
+                        <div class="flex-1 relative">
+                                                        <lf-search-input></lf-search-input>
+                                                    </div>
+                        <div class="xl:text-right xl:flex xl:items-center xl:justify-end">
+
+                            <!-- new dropdowns -->
+                            <div class="dropdown block xl:inline-block relative">
+                                <div class="bg-gray-300 text-gray-700 w-full xl:px-3 rounded inline-flex items-center">
+                                    <a title="Featured Lottie Animations" href="/featured"
+                                        class="border-b xl:border-none block py-3 w-full xl:py-0 xl:inline-block hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 xl:px-0 ">Animations</a>
+                                    <span class="hidden xl:block xl:text-left mt-1">
+                                        <img src="/images/components/drop_arrow.svg" class="h-4 opacity-50"></span>
+                                </div>
+                                <div
+                                    class="dropdown-content w-48 bg-white list-none pin-r text-center rounded-lg text-left  py-2 border z-20 absolute hidden text-gray-700 pt-1">
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Recent Lottie Animations" href="/recent">Recent</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Popular Lottie Animations" href="/popular">Popular</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        href="/coronavirus-animations" title="Free COVID-19 Animations">COVID-19</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        href="/animated-stickers" title="Lottie Animated Stickers">Animated
+                                        Stickers</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        href="/blog/tips-and-tutorials/how-to-upload-animations-to-lottiefiles"
+                                        title="Lottie Animated Stickers">How to Upload</a>
+                                    <a class="list-none text-left hover:text-lf-teal leading-normal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        href="/course" title="Lottie Course: Beginner's guide to Lottie">Course:
+                                        Beginner's guide to Lottie</a>
+                                </div>
+                            </div>
+
+                            <div class="dropdown block xl:inline-block relative">
+                                <div class="bg-gray-300 text-gray-700 w-full xl:px-3 rounded inline-flex items-center">
+                                    <a title="Featured Lottie Animations" title="Lottie Marketplace"
+                                        href="/marketplace"
+                                        class="border-b xl:border-none block py-3 w-full xl:py-0 xl:inline-block hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 xl:px-0 ">Marketplace</a>
+                                    <span class="hidden xl:block xl:text-left mt-1">
+                                        <img src="/images/components/drop_arrow.svg" class="h-4 opacity-50"></span>
+                                </div>
+                                <div
+                                    class="dropdown-content bg-white list-none pin-r text-center rounded-lg text-left  py-2 border z-20 absolute hidden text-gray-700 pt-1">
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Recent Lottie Animations" href="/marketplace">Packs</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Recent Lottie Animations" href="/marketplace/popular">Popular</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Popular Lottie Animations" title="Hire Lottie Animators"
+                                        href="/animators">Hire Animators</a>
+                                </div>
+                            </div>
+
+                            <a title="Preview Lottie Animation" href="/preview"
+                                class="border-b xl:border-none block py-3 xl:py-0 xl:inline-block hover:text-lf-teal text-sm text-grey-darker mx-2 px-2">Preview</a>
+
+                            <div class="dropdown block xl:inline-block relative">
+                                <div class="bg-gray-300 text-gray-700 w-full xl:px-3 rounded inline-flex items-center">
+                                    <a title="Featured Lottie Animations" title="Lottie Marketplace" href="#"
+                                        class="border-b xl:border-none block py-3 w-full xl:py-0 xl:inline-block hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 xl:px-0 ">Tools</a>
+                                    <span class="hidden xl:block xl:text-left mt-1">
+                                        <img src="/images/components/drop_arrow.svg" class="h-4 opacity-50"></span>
+                                </div>
+                                <div
+                                    class="dropdown-content w-40 bg-white list-none pin-r text-center rounded-lg text-left  py-2 border z-20 absolute hidden text-gray-700 pt-1">
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="LottieFiles After Effects Plugin " href="/ae">
+                                        Adobe AE Plugin</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="LottieFiles Figma Plugin" target="_blank" href="/figma">
+                                        Figma Plugin</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Lottie Editor" href="/editor">
+                                        Lottie Editor</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Lottie Player" href="/web-player">Web-Player</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Convert Lottie to GIF" href="/lottie-to-gif">Convert Lottie to GIF</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Convert SVG to Lottie" href="/svg-to-lottie">Convert SVG to Lottie</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Lottie JSON Editor" href="/tools/json-editor">JSON Editor</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Interactivity Guide"
+                                        href="https://lottiefiles.com/interactivity">Interactivity Guide</a>
+                                </div>
+                            </div>
+
+                            <div class="dropdown block xl:inline-block relative">
+                                <div class="bg-gray-300 text-gray-700 w-full xl:px-3 rounded inline-flex items-center">
+                                    <a title="Featured Lottie Animations" href="#"
+                                        class="border-b xl:border-none block py-3 w-full xl:py-0 xl:inline-block hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 xl:px-0 ">Resources</a>
+                                    <span class="hidden xl:block xl:text-left mt-1">
+                                        <img src="/images/components/drop_arrow.svg" class="h-4 opacity-50"></span>
+                                </div>
+                                <div
+                                    class="dropdown-content w-32 bg-white list-none pin-r text-center rounded-lg text-left  py-2 border z-20 absolute hidden text-gray-700 pt-1">
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="LottieFiles Blog" href="/blog">Blog</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                       title="Course" href="/course"
+                                       target="_blank">Course</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="What is Lottie" href="/what-is-lottie">What is Lottie</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="dotLottie" href="https://dotlottie.io" target="_blank">dotLottie</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Open Source" href="https://github.com/lottiefiles" target="_blank">Open
+                                        Source</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="Lottie Discussions" href="/discuss">Discussions</a>
+                                    <a class="list-none text-left hover:text-lf-teal text-sm text-grey-darker mx-2 px-2 py-2 block"
+                                        title="LottieFiles FAQ" href="https://lottiefiles.zendesk.com/"
+                                        target="_blank">FAQ /
+                                        Support</a>
+                                </div>
+                            </div>
+
+                            <!-- new dropdowns -->
+
+                            
+                                                        
+                            
+                            <div>
+                                <cart-nav></cart-nav>
+                            </div>
+
+                            <profile-nav id="329231" shortname="Sai" name="Sai Sree"
+                                email="saisreedhar2001@gmail.com" avatar="5edcdc5d0b820.jpg" url=""
+                                is_pro="0" is_labs="0"></profile-nav>
+
+                            
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+                
+    
+<section class="lf-padding container mx-auto bg-white">
+    <div class="p-4 md:w-3/4 mx-auto px-0 flex flex-row items-center">
+
+                <a href="/user/487" class="flex flex-row items-center">
+            <img src="https://assets4.lottiefiles.com/avatars/300_487.jpg"
+                class="w-8 h-8 rounded-full overflow-hidden">
+            <h3 class="hidden md:block md:text-sm mx-4 text-grey-dark">Jinson Johny</h3>
+        </a>
+                <div class="ml-auto flex flex-row">
+                        <a onclick="convertGif()" title="Convert Lottie to GIF"
+                class="flex p-3 ml-3 py-2 flex-row items-center trans mr-3 hover:bg-grey-light bg-grey-lighter rounded relative items-center">
+                <span class="hidden md:inline-block ml-auto rounded-full text-white bg-green font-bold block text-sm"
+                    style="
+                                    top: -10px;
+                                    right: -12px;
+                                    padding: 3px 6px;
+                                    height: 16px;
+                                    font-size: 7pt;
+                                ">NEW</span>
+                <span class="text-sm font-bold px-2 text-black">Convert to GIF</span>
+            </a>
+
+            <download-button class="mr-3" id="793" file="https://assets2.lottiefiles.com/datafiles/MUp3wlMDGtoK5FK/data.json" slug="793-cycle-animation"
+                title="Cycle Animation" primarylink="/download/public/793" lottie="https://assets5.lottiefiles.com/datafiles/MUp3wlMDGtoK5FK/data.json"
+                json="/download/public/793"   gif="/download/public/793/gif"
+                mp4="/download/public/793/mp4"
+                  >
+            </download-button>
+                        <likes type="big" id="793" count="77" liked="">
+            </likes>
+        </div>
+    </div>
+
+    <lf-player is_dotlottie="" path="https://assets1.lottiefiles.com/datafiles/MUp3wlMDGtoK5FK/data.json" active-color="#ffffff"
+        active-speed="3" height="540px" is-full-page="true" controls="true" data="{&quot;id&quot;:793,&quot;slug&quot;:&quot;793-cycle-animation&quot;,&quot;title&quot;:&quot;Cycle Animation&quot;,&quot;file_hash&quot;:null,&quot;description&quot;:null,&quot;preview&quot;:&quot;render\/jum1pgm3.png&quot;,&quot;bg_color&quot;:&quot;#ffffff&quot;,&quot;speed&quot;:3,&quot;downloads&quot;:3144,&quot;aep_flag&quot;:0,&quot;data_file&quot;:&quot;\/datafiles\/MUp3wlMDGtoK5FK\/data.json&quot;,&quot;dotlottie_file&quot;:null,&quot;package&quot;:&quot;MUp3wlMDGtoK5FK.json&quot;,&quot;user_id&quot;:487,&quot;created_at&quot;:&quot;2017-10-09 15:38:13&quot;,&quot;preview_video&quot;:&quot;render\/jum1pgm3.mp4&quot;,&quot;type&quot;:0,&quot;price&quot;:0,&quot;is_liked&quot;:false,&quot;like_count&quot;:77,&quot;is_dotlottie&quot;:false,&quot;file&quot;:&quot;https:\/\/assets6.lottiefiles.com\/datafiles\/MUp3wlMDGtoK5FK\/data.json&quot;,&quot;preview_url&quot;:&quot;https:\/\/assets2.lottiefiles.com\/render\/jum1pgm3.png&quot;,&quot;preview_video_url&quot;:&quot;https:\/\/assets8.lottiefiles.com\/render\/jum1pgm3.mp4&quot;,&quot;baseprice&quot;:&quot;0&quot;,&quot;entry_license&quot;:null,&quot;meta&quot;:{&quot;id&quot;:433,&quot;model&quot;:&quot;App\\Entry&quot;,&quot;resource_id&quot;:&quot;793&quot;,&quot;lottie_url&quot;:&quot;https:\/\/assets9.lottiefiles.comhttps:\/\/assets9.lottiefiles.com\/datafiles\/MUp3wlMDGtoK5FK\/data.json&quot;,&quot;hash&quot;:&quot;hm5wBG&quot;,&quot;type&quot;:&quot;json&quot;,&quot;file_size&quot;:&quot;142142&quot;,&quot;number_of_layers&quot;:9,&quot;resolution&quot;:null,&quot;frame_rate&quot;:0,&quot;total_frames&quot;:0,&quot;bodymovin_version&quot;:&quot;4.5.0&quot;,&quot;height&quot;:520,&quot;width&quot;:640,&quot;in_point&quot;:0,&quot;out_point&quot;:160,&quot;images&quot;:0,&quot;fonts&quot;:0,&quot;text&quot;:0,&quot;bg_color&quot;:&quot;#ffffff&quot;,&quot;speed&quot;:3,&quot;last_modified&quot;:&quot;2020-07-20 07:42:34&quot;,&quot;status&quot;:&quot;requested&quot;,&quot;created_at&quot;:&quot;2020-07-20 07:42:34&quot;,&quot;updated_at&quot;:&quot;2020-07-20 07:42:34&quot;},&quot;user&quot;:{&quot;id&quot;:487,&quot;name&quot;:&quot;Jinson Johny&quot;,&quot;email&quot;:&quot;jinsoncjohny@gmail.com&quot;,&quot;email_verified_at&quot;:null,&quot;verification_email_sent_at&quot;:null,&quot;created_at&quot;:&quot;2017-10-09 15:33:50&quot;,&quot;updated_at&quot;:&quot;2019-08-01 02:44:11&quot;,&quot;stripe_id&quot;:null,&quot;card_brand&quot;:null,&quot;card_last_four&quot;:null,&quot;trial_ends_at&quot;:null,&quot;type&quot;:null,&quot;admin&quot;:0,&quot;count_entries&quot;:1,&quot;url&quot;:&quot;\/user\/487&quot;,&quot;avatar&quot;:&quot;487.jpg&quot;,&quot;approval_rights&quot;:0,&quot;og_image&quot;:&quot;og_preview\/487.png&quot;,&quot;is_pro&quot;:0,&quot;is_labs&quot;:0,&quot;is_marketplace&quot;:0,&quot;is_hire&quot;:0,&quot;is_developer&quot;:0,&quot;mautic_id&quot;:null,&quot;is_figma&quot;:0,&quot;is_ae_plugin&quot;:0,&quot;link&quot;:&quot;\/user\/487&quot;,&quot;avatarlink&quot;:&quot;https:\/\/assets2.lottiefiles.com\/avatars\/300_487.jpg&quot;,&quot;profile_link&quot;:&quot;https:\/\/lottiefiles.com\/\/user\/487&quot;,&quot;discourse_avatar_url&quot;:&quot;https:\/\/assets5.lottiefiles.com\/avatars\/300_487.jpg&quot;},&quot;comments&quot;:[{&quot;id&quot;:679,&quot;commenter_id&quot;:52601,&quot;commentable_type&quot;:&quot;App\\Entry&quot;,&quot;commentable_id&quot;:793,&quot;comment&quot;:&quot;Beautiful&quot;,&quot;child_id&quot;:null,&quot;project_animation_version_id&quot;:null,&quot;frame_position&quot;:null,&quot;frame&quot;:null,&quot;status&quot;:null,&quot;created_at&quot;:&quot;2019-05-06 12:29:33&quot;,&quot;updated_at&quot;:&quot;2019-05-06 12:29:33&quot;}],&quot;likes_counter&quot;:{&quot;id&quot;:436,&quot;likeable_type&quot;:&quot;App\\Entry&quot;,&quot;likeable_id&quot;:793,&quot;type_id&quot;:&quot;LIKE&quot;,&quot;count&quot;:77,&quot;created_at&quot;:&quot;2019-02-06 07:05:46&quot;,&quot;updated_at&quot;:&quot;2020-08-28 00:06:55&quot;}}">
+    </lf-player>
+
+    <div class="container mx-auto">
+        <div class="md:w-3/4 mx-auto">
+            <div class="flex flex-col md:flex-row mt-6">
+                <div class="w-full md:w-4/5 p-0 md:p-6 mr-0 md:mr-6 pl-0 pt-3 flex flex-col">
+                    <h1 class="text-2xl">Cycle Animation</h1>
+                                        <span class="text-sm text-grey-darker py-3">2 years ago</span>
+                    
+                                        
+                    <div class="pt-3 mb-4 md:mb-0">
+                                                <comment id="793" slug="793-cycle-animation" data_file="https://assets6.lottiefiles.com/datafiles/MUp3wlMDGtoK5FK/data.json"
+                            is-large="true"></comment>
+                                            </div>
+                </div>
+
+
+                <div class="w-full md:p-6 m-0 md:p-0 md:w-2/5 md:ml-0 md:pr-0 md:mt-0 md:mr-0 md:mb-6">
+                    <lf-player-controls entry="{&quot;id&quot;:793,&quot;slug&quot;:&quot;793-cycle-animation&quot;,&quot;title&quot;:&quot;Cycle Animation&quot;,&quot;file_hash&quot;:null,&quot;description&quot;:null,&quot;preview&quot;:&quot;render\/jum1pgm3.png&quot;,&quot;bg_color&quot;:&quot;#ffffff&quot;,&quot;speed&quot;:3,&quot;downloads&quot;:3144,&quot;aep_flag&quot;:0,&quot;data_file&quot;:&quot;\/datafiles\/MUp3wlMDGtoK5FK\/data.json&quot;,&quot;dotlottie_file&quot;:null,&quot;package&quot;:&quot;MUp3wlMDGtoK5FK.json&quot;,&quot;user_id&quot;:487,&quot;created_at&quot;:&quot;2017-10-09 15:38:13&quot;,&quot;preview_video&quot;:&quot;https:\/\/assets8.lottiefiles.com\/render\/jum1pgm3.mp4&quot;,&quot;type&quot;:0,&quot;price&quot;:0,&quot;is_liked&quot;:false,&quot;like_count&quot;:77,&quot;is_dotlottie&quot;:false,&quot;file&quot;:&quot;https:\/\/assets9.lottiefiles.com\/datafiles\/MUp3wlMDGtoK5FK\/data.json&quot;,&quot;preview_url&quot;:&quot;https:\/\/assets7.lottiefiles.com\/render\/jum1pgm3.png&quot;,&quot;preview_video_url&quot;:&quot;https:\/\/assets9.lottiefiles.com\/https:\/\/assets3.lottiefiles.com\/https:\/\/assets8.lottiefiles.com\/render\/jum1pgm3.mp4&quot;,&quot;baseprice&quot;:&quot;0&quot;,&quot;entry_license&quot;:null,&quot;meta&quot;:{&quot;id&quot;:433,&quot;model&quot;:&quot;App\\Entry&quot;,&quot;resource_id&quot;:&quot;793&quot;,&quot;lottie_url&quot;:&quot;https:\/\/assets4.lottiefiles.comhttps:\/\/assets9.lottiefiles.com\/datafiles\/MUp3wlMDGtoK5FK\/data.json&quot;,&quot;hash&quot;:&quot;hm5wBG&quot;,&quot;type&quot;:&quot;json&quot;,&quot;file_size&quot;:&quot;142142&quot;,&quot;number_of_layers&quot;:9,&quot;resolution&quot;:null,&quot;frame_rate&quot;:0,&quot;total_frames&quot;:0,&quot;bodymovin_version&quot;:&quot;4.5.0&quot;,&quot;height&quot;:520,&quot;width&quot;:640,&quot;in_point&quot;:0,&quot;out_point&quot;:160,&quot;images&quot;:0,&quot;fonts&quot;:0,&quot;text&quot;:0,&quot;bg_color&quot;:&quot;#ffffff&quot;,&quot;speed&quot;:3,&quot;last_modified&quot;:&quot;2020-07-20 07:42:34&quot;,&quot;status&quot;:&quot;requested&quot;,&quot;created_at&quot;:&quot;2020-07-20 07:42:34&quot;,&quot;updated_at&quot;:&quot;2020-07-20 07:42:34&quot;},&quot;user&quot;:{&quot;id&quot;:487,&quot;name&quot;:&quot;Jinson Johny&quot;,&quot;email&quot;:&quot;jinsoncjohny@gmail.com&quot;,&quot;email_verified_at&quot;:null,&quot;verification_email_sent_at&quot;:null,&quot;created_at&quot;:&quot;2017-10-09 15:33:50&quot;,&quot;updated_at&quot;:&quot;2019-08-01 02:44:11&quot;,&quot;stripe_id&quot;:null,&quot;card_brand&quot;:null,&quot;card_last_four&quot;:null,&quot;trial_ends_at&quot;:null,&quot;type&quot;:null,&quot;admin&quot;:0,&quot;count_entries&quot;:1,&quot;url&quot;:&quot;\/user\/487&quot;,&quot;avatar&quot;:&quot;487.jpg&quot;,&quot;approval_rights&quot;:0,&quot;og_image&quot;:&quot;og_preview\/487.png&quot;,&quot;is_pro&quot;:0,&quot;is_labs&quot;:0,&quot;is_marketplace&quot;:0,&quot;is_hire&quot;:0,&quot;is_developer&quot;:0,&quot;mautic_id&quot;:null,&quot;is_figma&quot;:0,&quot;is_ae_plugin&quot;:0,&quot;profile_link&quot;:&quot;https:\/\/lottiefiles.com\/\/user\/487&quot;,&quot;link&quot;:&quot;\/user\/487&quot;,&quot;avatarlink&quot;:&quot;https:\/\/assets5.lottiefiles.com\/avatars\/300_487.jpg&quot;,&quot;discourse_avatar_url&quot;:&quot;https:\/\/assets10.lottiefiles.com\/avatars\/300_487.jpg&quot;},&quot;comments&quot;:[{&quot;id&quot;:679,&quot;commenter_id&quot;:52601,&quot;commentable_type&quot;:&quot;App\\Entry&quot;,&quot;commentable_id&quot;:793,&quot;comment&quot;:&quot;Beautiful&quot;,&quot;child_id&quot;:null,&quot;project_animation_version_id&quot;:null,&quot;frame_position&quot;:null,&quot;frame&quot;:null,&quot;status&quot;:null,&quot;created_at&quot;:&quot;2019-05-06 12:29:33&quot;,&quot;updated_at&quot;:&quot;2019-05-06 12:29:33&quot;}],&quot;likes_counter&quot;:{&quot;id&quot;:436,&quot;likeable_type&quot;:&quot;App\\Entry&quot;,&quot;likeable_id&quot;:793,&quot;type_id&quot;:&quot;LIKE&quot;,&quot;count&quot;:77,&quot;created_at&quot;:&quot;2019-02-06 07:05:46&quot;,&quot;updated_at&quot;:&quot;2020-08-28 00:06:55&quot;}}" data_file="https://assets3.lottiefiles.com/datafiles/MUp3wlMDGtoK5FK/data.json" speed="3"
+                        entry-color="#ffffff" type="0" price="0">
+                    </lf-player-controls>
+
+                                        <div class="py-3">
+                        <ul class="list-reset text-grey-darker">
+                            <li class="my-3">Bodymovin Version:
+                                <strong>4.5.0</strong>
+                            </li>
+                                                        <li class="my-3">Resolution: <strong>640 x
+                                    520</strong></li>
+                                                        <li class="my-3">Filesize: <strong>
+                                                                        138.81 KB
+                                                                        ( 9 layers
+                                    )                                </strong></li>
+                                                                                    <li>Colors</li>
+                            <li class="mt-2 flex items-center flex-wrap">
+                                <color-tag tagcolors="[&quot;212121&quot;,&quot;FFFFFF&quot;,&quot;232323&quot;,&quot;F2F7FF&quot;,&quot;303030&quot;,&quot;545454&quot;,&quot;2B2B2B&quot;,&quot;FCCCAD&quot;,&quot;6D4705&quot;,&quot;AA931E&quot;,&quot;D1B52D&quot;,&quot;AA700F&quot;,&quot;996007&quot;,&quot;825107&quot;,&quot;632605&quot;,&quot;1C1C19&quot;,&quot;2B68AF&quot;,&quot;B7825E&quot;,&quot;5E2D0F&quot;,&quot;116399&quot;,&quot;9E968E&quot;,&quot;CCE2E2&quot;,&quot;383535&quot;,&quot;545B5B&quot;,&quot;333A3A&quot;,&quot;5E6868&quot;,&quot;495454&quot;,&quot;4C5656&quot;,&quot;498EE2&quot;,&quot;2B68AD&quot;,&quot;E5B28E&quot;,&quot;161616&quot;,&quot;0C4C75&quot;,&quot;165407&quot;,&quot;217C0C&quot;,&quot;238C0C&quot;]"></color-tag>
+
+                                                                
+
+
+                            </li>
+                                                    </ul>
+                    </div>
+                    
+                                        <div class="py-3">
+                        <div class="mb-4  text-grey-darker">Tags</div>
+                        <div>                                                        <a href="/animation/bike" class="inline-block mb-2 text-xs lf-pill"
+                                title="bike animations">bike</a>
+                                                                                                                <a href="/animation/transport" class="inline-block mb-2 text-xs lf-pill"
+                                title="transport animations">transport</a>
+                                                                                                                <a href="/animation/cycle" class="inline-block mb-2 text-xs lf-pill"
+                                title="cycle animations">cycle</a>
+                                                                                                                <a href="/animation/bicycle" class="inline-block mb-2 text-xs lf-pill"
+                                title="bicycle animations">bicycle</a>
+                                                                                                                <a href="/animation/ride" class="inline-block mb-2 text-xs lf-pill"
+                                title="ride animations">ride</a>
+                                                                                                                <a href="/animation/riding" class="inline-block mb-2 text-xs lf-pill"
+                                title="riding animations">riding</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                    </div>
+                                        <sharing-links url="https://lottiefiles.com/793-cycle-animation" title="Cycle Animation">
+                    </sharing-links>
+                    <div class="border-t border-grey-lighter my-3"></div>
+                    <div onClick="reportAnimation()" class="flex items-center cursor-pointer">
+                        <img class="w-4 h-4 mr-2" src="/images/svg/report_flag.svg" />
+                        <div class="font-lf-regular font-normal text-sm text-grey">
+                            Report animation
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <lf-shortcut></lf-shortcut>
+                <div class="flex md:p-4 pt-4 md:pt-0 ">
+                    <div class="w-24"><a href="/license">
+                                                        <img src="/images/cc.png">
+                                                    </a></div>
+                    <div class="px-3 text-sm text-grey-dark md:w-2/3 leading-lf">
+                                                This animation is available to download and use for Free
+                        under Creative Commons License
+                        4.0
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="lf-padding  bg-lf-bg">
+    <div class="container mx-auto py-12 border-b pb-8">
+        <div class="md:flex">
+            <div class="md:w-1/2">
+                <h2 class="text-2xl mb-4">Related Animations</h2>
+            </div>
+            <div class="md:w-1/2 md:text-right">
+
+            </div>
+        </div>
+        <div class="md:-mx-6 flex flex-wrap">
+        
+    <div id='elem_32270'
+        class="w-full md:w-1/4 flex flex-col py-6 md:p-6 ">
+        <div class="lf-box trans trans-slow hover:shadow-md">
+            <a href="https://lottiefiles.com/32270-roll-roll-roll" title="Roll roll roll" v-on:click.prevent
+                class="block rounded-t-lg border-b border-grey-lighter pt-1 pb-0 relative"
+                style="background-color:#fff">
+
+                                <lottie-listings height="270px" type="public"
+                    src="https://assets3.lottiefiles.com/private_files/lf30_OTKlKD.json"
+                    slug="32270-roll-roll-roll" speed="1" bg="#fff" is-listing='true'
+                    controls="false" is_dotlottie="">
+                </lottie-listings>
+                
+                            </a>
+
+                        <div class="flex flex-row p-4 items-center">
+                                <figure class="overflow-hidden rounded-full w-8 h-8">
+                    <a href="/manu_perret">
+                        <img src="https://assets3.lottiefiles.com/avatars/100_472834-2096657994.jpg" alt="">
+                    </a>
+                </figure>
+                <a href="/manu_perret">
+                    <h3 class="text-sm font-normal px-2 text-grey-dark">Manuel Perret</h3>
+                </a>
+                
+                                <div class="ml-auto flex flex-col">
+                    <div href="" class=" pb-2">
+                        <likes type="mini" slug="32270-roll-roll-roll" count="0"
+                            liked=""></likes>
+                    </div>
+                    <a href="" class="flex flex-row text-grey-dark">
+                        <svg class="w-3 h-3" viewBox="0 0 9 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Community-2/Animation-Card" transform="translate(-211.000000, -303.000000)" fill="#8E8E8E" fill-rule="nonzero">
+            <g id="1">
+                <g id="Animation-Meta-Info" transform="translate(16.000000, 277.000000)">
+                    <g id="View-Copy" transform="translate(195.000000, 24.000000)">
+                        <g id="download-solid" transform="translate(0.000000, 2.000000)">
+                            <path d="M7.71018733,4.78885001 L4.5,7.92770004 L1.28981267,4.78885001 L2.08518747,4.01115001 L3.93750007,5.82230004 L3.93750007,0 L5.06249993,0 L5.06249993,5.82230004 L6.91481253,4.01115001 L7.71018733,4.78885001 Z M7.87500014,7.80000003 L9,7.80000003 L9,8.90000002 C9,9.50610004 8.49599979,10 7.87500014,10 L1.12499986,10 C0.504562499,10 0,9.50610004 0,8.90000002 L0,7.80000003 L1.12499986,7.80000003 L1.12499986,8.90000002 L7.87500014,8.90000002 L7.87500014,7.80000003 Z" id="download-solid-"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+                        <span class="pl-1 text-xs">1</span>
+                    </a>
+                </div>
+                            </div>
+                    </div>
+    </div>
+        
+    <div id='elem_32047'
+        class="w-full md:w-1/4 flex flex-col py-6 md:p-6 ">
+        <div class="lf-box trans trans-slow hover:shadow-md">
+            <a href="https://lottiefiles.com/32047-on-boarding-animation-top-stocks" title="On Boarding Animation - Top Stocks" v-on:click.prevent
+                class="block rounded-t-lg border-b border-grey-lighter pt-1 pb-0 relative"
+                style="background-color:#FFFFFF">
+
+                                <lottie-listings height="270px" type="public"
+                    src="https://assets6.lottiefiles.com/private_files/lf30_F3v2Nj.json"
+                    slug="32047-on-boarding-animation-top-stocks" speed="1" bg="#FFFFFF" is-listing='true'
+                    controls="false" is_dotlottie="">
+                </lottie-listings>
+                
+                            </a>
+
+                        <div class="flex flex-row p-4 items-center">
+                                <figure class="overflow-hidden rounded-full w-8 h-8">
+                    <a href="/kidastudio">
+                        <img src="https://assets9.lottiefiles.com/avatars/100_84669-1863285059.jpg" alt="">
+                    </a>
+                </figure>
+                <a href="/kidastudio">
+                    <h3 class="text-sm font-normal px-2 text-grey-dark">KidA Studio</h3>
+                </a>
+                
+                                <div class="ml-auto flex flex-col">
+                    <div href="" class=" pb-2">
+                        <likes type="mini" slug="32047-on-boarding-animation-top-stocks" count="0"
+                            liked=""></likes>
+                    </div>
+                    <a href="" class="flex flex-row text-grey-dark">
+                        <svg class="w-3 h-3" viewBox="0 0 9 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Community-2/Animation-Card" transform="translate(-211.000000, -303.000000)" fill="#8E8E8E" fill-rule="nonzero">
+            <g id="1">
+                <g id="Animation-Meta-Info" transform="translate(16.000000, 277.000000)">
+                    <g id="View-Copy" transform="translate(195.000000, 24.000000)">
+                        <g id="download-solid" transform="translate(0.000000, 2.000000)">
+                            <path d="M7.71018733,4.78885001 L4.5,7.92770004 L1.28981267,4.78885001 L2.08518747,4.01115001 L3.93750007,5.82230004 L3.93750007,0 L5.06249993,0 L5.06249993,5.82230004 L6.91481253,4.01115001 L7.71018733,4.78885001 Z M7.87500014,7.80000003 L9,7.80000003 L9,8.90000002 C9,9.50610004 8.49599979,10 7.87500014,10 L1.12499986,10 C0.504562499,10 0,9.50610004 0,8.90000002 L0,7.80000003 L1.12499986,7.80000003 L1.12499986,8.90000002 L7.87500014,8.90000002 L7.87500014,7.80000003 Z" id="download-solid-"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+                        <span class="pl-1 text-xs">2</span>
+                    </a>
+                </div>
+                            </div>
+                    </div>
+    </div>
+        
+    <div id='elem_32045'
+        class="w-full md:w-1/4 flex flex-col py-6 md:p-6 ">
+        <div class="lf-box trans trans-slow hover:shadow-md">
+            <a href="https://lottiefiles.com/32045-question" title="Question" v-on:click.prevent
+                class="block rounded-t-lg border-b border-grey-lighter pt-1 pb-0 relative"
+                style="background-color:#ffffff">
+
+                                <lottie-listings height="270px" type="public"
+                    src="https://assets6.lottiefiles.com/packages/lf20_lKvkGl.json"
+                    slug="32045-question" speed="1" bg="#ffffff" is-listing='true'
+                    controls="false" is_dotlottie="">
+                </lottie-listings>
+                
+                            </a>
+
+                        <div class="flex flex-row p-4 items-center">
+                                <figure class="overflow-hidden rounded-full w-8 h-8">
+                    <a href="/user/39929">
+                        <img src="https://assets1.lottiefiles.com/avatars/100_default_user.jpg" alt="">
+                    </a>
+                </figure>
+                <a href="/user/39929">
+                    <h3 class="text-sm font-normal px-2 text-grey-dark">Geoffroy</h3>
+                </a>
+                
+                                <div class="ml-auto flex flex-col">
+                    <div href="" class=" pb-2">
+                        <likes type="mini" slug="32045-question" count="0"
+                            liked=""></likes>
+                    </div>
+                    <a href="" class="flex flex-row text-grey-dark">
+                        <svg class="w-3 h-3" viewBox="0 0 9 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Community-2/Animation-Card" transform="translate(-211.000000, -303.000000)" fill="#8E8E8E" fill-rule="nonzero">
+            <g id="1">
+                <g id="Animation-Meta-Info" transform="translate(16.000000, 277.000000)">
+                    <g id="View-Copy" transform="translate(195.000000, 24.000000)">
+                        <g id="download-solid" transform="translate(0.000000, 2.000000)">
+                            <path d="M7.71018733,4.78885001 L4.5,7.92770004 L1.28981267,4.78885001 L2.08518747,4.01115001 L3.93750007,5.82230004 L3.93750007,0 L5.06249993,0 L5.06249993,5.82230004 L6.91481253,4.01115001 L7.71018733,4.78885001 Z M7.87500014,7.80000003 L9,7.80000003 L9,8.90000002 C9,9.50610004 8.49599979,10 7.87500014,10 L1.12499986,10 C0.504562499,10 0,9.50610004 0,8.90000002 L0,7.80000003 L1.12499986,7.80000003 L1.12499986,8.90000002 L7.87500014,8.90000002 L7.87500014,7.80000003 Z" id="download-solid-"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+                        <span class="pl-1 text-xs">0</span>
+                    </a>
+                </div>
+                            </div>
+                    </div>
+    </div>
+        
+    <div id='elem_32038'
+        class="w-full md:w-1/4 flex flex-col py-6 md:p-6 ">
+        <div class="lf-box trans trans-slow hover:shadow-md">
+            <a href="https://lottiefiles.com/32038-char-lea-selfi-ktp" title="char lea selfi ktp" v-on:click.prevent
+                class="block rounded-t-lg border-b border-grey-lighter pt-1 pb-0 relative"
+                style="background-color:#ffffff">
+
+                                <lottie-listings height="270px" type="public"
+                    src="https://assets9.lottiefiles.com/packages/lf20_HCqIlr/data.json"
+                    slug="32038-char-lea-selfi-ktp" speed="1" bg="#ffffff" is-listing='true'
+                    controls="false" is_dotlottie="">
+                </lottie-listings>
+                
+                                            </a>
+
+                        <div class="flex flex-row p-4 items-center">
+                                <figure class="overflow-hidden rounded-full w-8 h-8">
+                    <a href="/nahraf182">
+                        <img src="https://assets7.lottiefiles.com/avatars/100_5f4dc643e30ca.jpg" alt="">
+                    </a>
+                </figure>
+                <a href="/nahraf182">
+                    <h3 class="text-sm font-normal px-2 text-grey-dark">Farhan Rachmatullah</h3>
+                </a>
+                
+                                <div class="ml-auto flex flex-col">
+                    <div href="" class=" pb-2">
+                        <likes type="mini" slug="32038-char-lea-selfi-ktp" count="0"
+                            liked=""></likes>
+                    </div>
+                    <a href="" class="flex flex-row text-grey-dark">
+                        <svg class="w-3 h-3" viewBox="0 0 9 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Community-2/Animation-Card" transform="translate(-211.000000, -303.000000)" fill="#8E8E8E" fill-rule="nonzero">
+            <g id="1">
+                <g id="Animation-Meta-Info" transform="translate(16.000000, 277.000000)">
+                    <g id="View-Copy" transform="translate(195.000000, 24.000000)">
+                        <g id="download-solid" transform="translate(0.000000, 2.000000)">
+                            <path d="M7.71018733,4.78885001 L4.5,7.92770004 L1.28981267,4.78885001 L2.08518747,4.01115001 L3.93750007,5.82230004 L3.93750007,0 L5.06249993,0 L5.06249993,5.82230004 L6.91481253,4.01115001 L7.71018733,4.78885001 Z M7.87500014,7.80000003 L9,7.80000003 L9,8.90000002 C9,9.50610004 8.49599979,10 7.87500014,10 L1.12499986,10 C0.504562499,10 0,9.50610004 0,8.90000002 L0,7.80000003 L1.12499986,7.80000003 L1.12499986,8.90000002 L7.87500014,8.90000002 L7.87500014,7.80000003 Z" id="download-solid-"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+                        <span class="pl-1 text-xs">5</span>
+                    </a>
+                </div>
+                            </div>
+                    </div>
+    </div>
+    
+    </div>    </div>
+</section>
+
+
+            <lf-uploader></lf-uploader>
+    
+    <utils></utils>
+
+            <lf-quick-preview></lf-quick-preview>
+    
+    <report-animation></report-animation>
+
+    <auth ref="auth"></auth>
+
+    <router-view></router-view>
+
+    <div class="bg-lf-bg" style="background:#fff">
+    <footer id="footer" class="container px-6 md:px-4 mx-auto mt-8 border-grey-lighter py-6 flex flex-col">
+        <div class="flex flex-col md:flex-row">
+
+            
+
+            
+            <div class="md:w-1/4 flex flex-col mb-12 md:mb-0">
+                <h4 class="text-base pb-4">About</h4>
+                <div class="flex flex-wrap">
+
+                                    <a title="LottieFiles Blog"
+                       href="/blog"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Blog
+                    </a>
+                                    <a title="LottieFiles Team"
+                       href="/team"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Team
+                    </a>
+                                    <a title="LottieFiles Careers"
+                       href="/careers"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Careers
+                    </a>
+                                    <a title="LottieFiles Press"
+                       href="/press"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Press
+                    </a>
+                                    <a title="LottieFiles Privacy Policy"
+                       href="/page/privacy-policy"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Privacy Policy
+                    </a>
+                                    <a title="LottieFiles Terms and Conditions"
+                       href="/page/terms-and-conditions"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Terms and Conditions
+                    </a>
+                                    <a title="LottieFiles Terms of Sale"
+                       href="/page/terms-of-sale"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Terms of Sale
+                    </a>
+                                    <a title="FAQ / Support"
+                       href="https://lottiefiles.zendesk.com"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        FAQ / Support
+                    </a>
+                                </div>
+            </div>
+
+            
+            <div class="md:w-1/4 flex flex-col mb-12 md:mb-0">
+                <h4 class="text-base pb-4">Lottie</h4>
+                <div class="flex flex-wrap">
+
+                                    <a title="LottieFiles Animations"
+                       href="/popular"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Animations
+                    </a>
+                                    <a title="LottieFiles Animators"
+                       href="/marketplace/animators"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Animators
+                    </a>
+                                    <a title="LottieFiles Marketplace"
+                       href="/marketplace"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Marketplace
+                    </a>
+                                    <a title="LottieFiles Showcase"
+                       href="/community"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Showcase
+                    </a>
+                                    <a title="Courses"
+                       href="/course"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Courses
+                    </a>
+                                    <a title="LottieFiles Community Discussions"
+                       href="https://community.lottiefiles.com"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Community Discussions
+                    </a>
+                                    <a title="LottieFiles Community Guidelines"
+                       href="/page/community-guidelines"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Community Guidelines
+                    </a>
+                                    <a title="LottieFiles Upload Guidelines"
+                       href="/page/upload-guidelines"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Upload Guidelines
+                    </a>
+                                </div>
+            </div>
+
+            
+            <div class="md:w-1/4 flex flex-col mb-12 md:mb-0">
+                <h4 class="text-base pb-4">Tools</h4>
+                <div class="flex flex-wrap">
+
+                                    <a title="Lottie Libraries"
+                       href="https://github.com/LottieFiles/awesome-lottie"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        Lottie Libraries
+                    </a>
+                                    <a title="LottieFiles for AE"
+                       href="/ae"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        LottieFiles for AE
+                    </a>
+                                    <a title="LottieFiles for Figma"
+                       href="/figma"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        LottieFiles for Figma
+                    </a>
+                                    <a title="LottieFiles iOS App"
+                       href="/ios"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        LottieFiles iOS App
+                    </a>
+                                    <a title="LottieFiles Android App"
+                       href="/android"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">
+                        LottieFiles Android App
+                    </a>
+                                </div>
+            </div>
+
+            
+            <div class="md:w-1/4 mb-12 md:mb-0">
+                <h4 class="text-base w-full pb-4">Social</h4>
+                <div class="flex flex-wrap">
+                                    <a title="LottieFiles on Twitter"
+                       href="https://twitter.com/LottieFiles"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">Twitter</a>
+                                    <a title="LottieFiles on Instagram"
+                       href="https://www.instagram.com/lottie.files"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">Instagram</a>
+                                    <a title="LottieFiles on Facebook"
+                       href="https://www.facebook.com/lottiefiles"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">Facebook</a>
+                                    <a title="LottieFiles on LinkedIn"
+                       href="https://www.linkedin.com/company/lottiefiles"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">LinkedIn</a>
+                                    <a title="LottieFiles on YouTube"
+                       href="https://www.youtube.com/channel/UCrD8xvZzX7QqZC_KXSAchqA"
+                       class="block w-1/2 md:w-full text-sm text-grey-darker py-1">YouTube</a>
+                                </div>
+            </div>
+        </div>
+
+
+        <div class="flex md:flex-row items-start flex-col-reverse mt-8">
+            <div class="md:w-1/2">
+                <div>
+                    <p class="text-sm text-grey-dark mt-2">
+                        LottieFiles is by Design Barn Inc.
+                    </p>
+                    <p class="text-sm text-grey-dark mt-1">
+                        Copyright &copy; 2020 Design Barn Inc. All rights reserved.
+                    </p>
+                </div>
+                <div class="mt-8 text-lf-regular">
+                    <made-with-love></made-with-love>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 flex flex-col md:flex-row">
+                <div class="md:w-1/2 flex flex-col pb-4">
+                    <a title="LottieFiles on Twitter" href="https://twitter.com/lottiefiles" target="_blank"
+                       class="md:px-3 pb-2 text-sm flex items-center text-grey-darkest"><img
+                            src="https://static4.lottiefiles.com/images/svg/social_twitter.svg" alt="Twitter Icon"
+                            class="w-5 mr-2"/>
+                        @lottiefiles
+                    </a>
+                    <a title="LottieFiles on Facebook" href="https://facebook.com/lottiefiles" target="_blank"
+                       class="md:px-3 pb-2 text-sm flex items-center text-grey-darkest"><img
+                            src="https://static4.lottiefiles.com/images/svg/social_fb.svg" alt="Facebook Icon" class="w-5 mr-2"/>
+                        /lottiefiles
+                    </a>
+                    
+
+                    
+                </div>
+                <div class="md:w-1/2 flex my-6 md:my-0">
+                    <a href="https://lottiefiles.com/lang-set/en"
+                       class="md:px-3 pb-3 text-sm flex items-center text-grey-darkest pr-5">
+                        English
+                    </a>
+                    <a href="https://lottiefiles.com/lang-set/zh_CN"
+                       class="md:px-3 pb-3 text-sm flex items-center text-grey-darkest pr-5">
+                        中文(简体)
+                    </a>
+                    <a href="https://lottiefiles.com/lang-set/de"
+                       class="md:px-3 pb-3 text-sm flex items-center text-grey-darkest">
+                        Deutsche
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</div>
+
+<script>window.lf = window.lf || {};lf.url = "https:\/\/lottiefiles.com";lf.user = {"id":329231,"name":"Sai Sree","avatar":"5edcdc5d0b820.jpg"};lf.staticPath = "https:\/\/static.lottiefiles.com";</script>
+<script src="https://static4.lottiefiles.com/js/manifest.2ecbb3.js"></script>
+<script src="https://static4.lottiefiles.com/js/vendor.2ba975.js"></script>
+<script src="https://static4.lottiefiles.com/js/app.9bed3d.js"></script>
+<script src="https://static4.lottiefiles.com/js/lang.js"></script>
+
+<script>
+    function reportAnimation() {
+            if (window.lf.user) {
+                Bus.$emit("REPORT_ANIMATION", {
+                    entryId: "793",
+                    entry: "{&quot;id&quot;:793,&quot;slug&quot;:&quot;793-cycle-animation&quot;,&quot;title&quot;:&quot;Cycle Animation&quot;,&quot;file_hash&quot;:null,&quot;description&quot;:null,&quot;preview&quot;:&quot;render\/jum1pgm3.png&quot;,&quot;bg_color&quot;:&quot;#ffffff&quot;,&quot;speed&quot;:3,&quot;downloads&quot;:3144,&quot;aep_flag&quot;:0,&quot;data_file&quot;:&quot;\/datafiles\/MUp3wlMDGtoK5FK\/data.json&quot;,&quot;dotlottie_file&quot;:null,&quot;package&quot;:&quot;MUp3wlMDGtoK5FK.json&quot;,&quot;user_id&quot;:487,&quot;created_at&quot;:&quot;2017-10-09 15:38:13&quot;,&quot;preview_video&quot;:&quot;https:\/\/assets9.lottiefiles.com\/https:\/\/assets3.lottiefiles.com\/https:\/\/assets8.lottiefiles.com\/render\/jum1pgm3.mp4&quot;,&quot;type&quot;:0,&quot;price&quot;:0,&quot;is_liked&quot;:false,&quot;like_count&quot;:77,&quot;is_dotlottie&quot;:false,&quot;file&quot;:&quot;https:\/\/assets5.lottiefiles.com\/datafiles\/MUp3wlMDGtoK5FK\/data.json&quot;,&quot;preview_url&quot;:&quot;https:\/\/assets4.lottiefiles.com\/render\/jum1pgm3.png&quot;,&quot;preview_video_url&quot;:&quot;https:\/\/assets7.lottiefiles.com\/https:\/\/assets5.lottiefiles.com\/https:\/\/assets9.lottiefiles.com\/https:\/\/assets3.lottiefiles.com\/https:\/\/assets8.lottiefiles.com\/render\/jum1pgm3.mp4&quot;,&quot;baseprice&quot;:&quot;0&quot;,&quot;entry_license&quot;:null,&quot;meta&quot;:{&quot;id&quot;:433,&quot;model&quot;:&quot;App\\Entry&quot;,&quot;resource_id&quot;:&quot;793&quot;,&quot;lottie_url&quot;:&quot;https:\/\/assets7.lottiefiles.comhttps:\/\/assets9.lottiefiles.com\/datafiles\/MUp3wlMDGtoK5FK\/data.json&quot;,&quot;hash&quot;:&quot;hm5wBG&quot;,&quot;type&quot;:&quot;json&quot;,&quot;file_size&quot;:&quot;142142&quot;,&quot;number_of_layers&quot;:9,&quot;resolution&quot;:null,&quot;frame_rate&quot;:0,&quot;total_frames&quot;:0,&quot;bodymovin_version&quot;:&quot;4.5.0&quot;,&quot;height&quot;:520,&quot;width&quot;:640,&quot;in_point&quot;:0,&quot;out_point&quot;:160,&quot;images&quot;:0,&quot;fonts&quot;:0,&quot;text&quot;:0,&quot;bg_color&quot;:&quot;#ffffff&quot;,&quot;speed&quot;:3,&quot;last_modified&quot;:&quot;2020-07-20 07:42:34&quot;,&quot;status&quot;:&quot;requested&quot;,&quot;created_at&quot;:&quot;2020-07-20 07:42:34&quot;,&quot;updated_at&quot;:&quot;2020-07-20 07:42:34&quot;},&quot;user&quot;:{&quot;id&quot;:487,&quot;name&quot;:&quot;Jinson Johny&quot;,&quot;email&quot;:&quot;jinsoncjohny@gmail.com&quot;,&quot;email_verified_at&quot;:null,&quot;verification_email_sent_at&quot;:null,&quot;created_at&quot;:&quot;2017-10-09 15:33:50&quot;,&quot;updated_at&quot;:&quot;2019-08-01 02:44:11&quot;,&quot;stripe_id&quot;:null,&quot;card_brand&quot;:null,&quot;card_last_four&quot;:null,&quot;trial_ends_at&quot;:null,&quot;type&quot;:null,&quot;admin&quot;:0,&quot;count_entries&quot;:1,&quot;url&quot;:&quot;\/user\/487&quot;,&quot;avatar&quot;:&quot;487.jpg&quot;,&quot;approval_rights&quot;:0,&quot;og_image&quot;:&quot;og_preview\/487.png&quot;,&quot;is_pro&quot;:0,&quot;is_labs&quot;:0,&quot;is_marketplace&quot;:0,&quot;is_hire&quot;:0,&quot;is_developer&quot;:0,&quot;mautic_id&quot;:null,&quot;is_figma&quot;:0,&quot;is_ae_plugin&quot;:0,&quot;profile_link&quot;:&quot;https:\/\/lottiefiles.com\/\/user\/487&quot;,&quot;link&quot;:&quot;\/user\/487&quot;,&quot;avatarlink&quot;:&quot;https:\/\/assets6.lottiefiles.com\/avatars\/300_487.jpg&quot;,&quot;discourse_avatar_url&quot;:&quot;https:\/\/assets2.lottiefiles.com\/avatars\/300_487.jpg&quot;},&quot;comments&quot;:[{&quot;id&quot;:679,&quot;commenter_id&quot;:52601,&quot;commentable_type&quot;:&quot;App\\Entry&quot;,&quot;commentable_id&quot;:793,&quot;comment&quot;:&quot;Beautiful&quot;,&quot;child_id&quot;:null,&quot;project_animation_version_id&quot;:null,&quot;frame_position&quot;:null,&quot;frame&quot;:null,&quot;status&quot;:null,&quot;created_at&quot;:&quot;2019-05-06 12:29:33&quot;,&quot;updated_at&quot;:&quot;2019-05-06 12:29:33&quot;}],&quot;likes_counter&quot;:{&quot;id&quot;:436,&quot;likeable_type&quot;:&quot;App\\Entry&quot;,&quot;likeable_id&quot;:793,&quot;type_id&quot;:&quot;LIKE&quot;,&quot;count&quot;:77,&quot;created_at&quot;:&quot;2019-02-06 07:05:46&quot;,&quot;updated_at&quot;:&quot;2020-08-28 00:06:55&quot;},&quot;tags&quot;:[{&quot;id&quot;:857,&quot;name&quot;:{&quot;en&quot;:&quot;bike&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;bike&quot;},&quot;type&quot;:null,&quot;order_column&quot;:857,&quot;created_at&quot;:&quot;2019-02-04 20:59:47&quot;,&quot;updated_at&quot;:&quot;2019-02-04 20:59:47&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:857,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:998,&quot;name&quot;:{&quot;en&quot;:&quot;transport&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;transport&quot;},&quot;type&quot;:null,&quot;order_column&quot;:998,&quot;created_at&quot;:&quot;2019-02-04 21:07:37&quot;,&quot;updated_at&quot;:&quot;2019-02-04 21:07:37&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:998,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:1331,&quot;name&quot;:{&quot;en&quot;:&quot;cycle&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;cycle&quot;},&quot;type&quot;:null,&quot;order_column&quot;:1331,&quot;created_at&quot;:&quot;2019-02-04 21:25:50&quot;,&quot;updated_at&quot;:&quot;2019-02-04 21:25:50&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:1331,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:1332,&quot;name&quot;:{&quot;en&quot;:&quot;bicycle&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;bicycle&quot;},&quot;type&quot;:null,&quot;order_column&quot;:1332,&quot;created_at&quot;:&quot;2019-02-04 21:25:50&quot;,&quot;updated_at&quot;:&quot;2019-02-04 21:25:50&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:1332,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:1333,&quot;name&quot;:{&quot;en&quot;:&quot;ride&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;ride&quot;},&quot;type&quot;:null,&quot;order_column&quot;:1333,&quot;created_at&quot;:&quot;2019-02-04 21:25:50&quot;,&quot;updated_at&quot;:&quot;2019-02-04 21:25:50&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:1333,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:1334,&quot;name&quot;:{&quot;en&quot;:&quot;riding&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;riding&quot;},&quot;type&quot;:null,&quot;order_column&quot;:1334,&quot;created_at&quot;:&quot;2019-02-04 21:25:50&quot;,&quot;updated_at&quot;:&quot;2019-02-04 21:25:50&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:1334,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:6784,&quot;name&quot;:{&quot;en&quot;:&quot;212121&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;212121&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:6769,&quot;created_at&quot;:&quot;2019-07-31 04:18:57&quot;,&quot;updated_at&quot;:&quot;2019-07-31 04:18:57&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:6784,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:14591,&quot;name&quot;:{&quot;en&quot;:&quot;FFFFFF&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;ffffff&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:12564,&quot;created_at&quot;:&quot;2019-08-27 08:38:18&quot;,&quot;updated_at&quot;:&quot;2019-08-27 08:38:18&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:14591,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:14597,&quot;name&quot;:{&quot;en&quot;:&quot;232323&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;232323&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:12570,&quot;created_at&quot;:&quot;2019-08-27 08:38:19&quot;,&quot;updated_at&quot;:&quot;2019-08-27 08:38:19&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:14597,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:14809,&quot;name&quot;:{&quot;en&quot;:&quot;F2F7FF&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;f2f7ff&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:12744,&quot;created_at&quot;:&quot;2019-08-29 08:23:44&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:23:44&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:14809,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:14866,&quot;name&quot;:{&quot;en&quot;:&quot;303030&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;303030&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:12780,&quot;created_at&quot;:&quot;2019-08-29 08:23:45&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:23:45&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:14866,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:16190,&quot;name&quot;:{&quot;en&quot;:&quot;545454&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;545454&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:13475,&quot;created_at&quot;:&quot;2019-08-29 08:42:02&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:02&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:16190,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:16239,&quot;name&quot;:{&quot;en&quot;:&quot;2B2B2B&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;2b2b2b&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:13503,&quot;created_at&quot;:&quot;2019-08-29 08:42:03&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:03&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:16239,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17089,&quot;name&quot;:{&quot;en&quot;:&quot;FCCCAD&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;fcccad&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14052,&quot;created_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17089,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17090,&quot;name&quot;:{&quot;en&quot;:&quot;6D4705&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;6d4705&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14053,&quot;created_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17090,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17091,&quot;name&quot;:{&quot;en&quot;:&quot;AA931E&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;aa931e&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14054,&quot;created_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17091,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17092,&quot;name&quot;:{&quot;en&quot;:&quot;D1B52D&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;d1b52d&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14055,&quot;created_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17092,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17094,&quot;name&quot;:{&quot;en&quot;:&quot;AA700F&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;aa700f&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14056,&quot;created_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17094,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17096,&quot;name&quot;:{&quot;en&quot;:&quot;996007&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;996007&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14058,&quot;created_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17096,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17097,&quot;name&quot;:{&quot;en&quot;:&quot;825107&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;825107&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14059,&quot;created_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17097,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17098,&quot;name&quot;:{&quot;en&quot;:&quot;632605&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;632605&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14060,&quot;created_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17098,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17099,&quot;name&quot;:{&quot;en&quot;:&quot;1C1C19&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;1c1c19&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14061,&quot;created_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17099,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17100,&quot;name&quot;:{&quot;en&quot;:&quot;2B68AF&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;2b68af&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14062,&quot;created_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17100,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17101,&quot;name&quot;:{&quot;en&quot;:&quot;B7825E&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;b7825e&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14063,&quot;created_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17101,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17102,&quot;name&quot;:{&quot;en&quot;:&quot;5E2D0F&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;5e2d0f&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14064,&quot;created_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:30&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17102,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17103,&quot;name&quot;:{&quot;en&quot;:&quot;116399&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;116399&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14065,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17103,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17104,&quot;name&quot;:{&quot;en&quot;:&quot;9E968E&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;9e968e&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14066,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17104,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17106,&quot;name&quot;:{&quot;en&quot;:&quot;CCE2E2&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;cce2e2&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14067,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17106,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17107,&quot;name&quot;:{&quot;en&quot;:&quot;383535&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;383535&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14068,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17107,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17108,&quot;name&quot;:{&quot;en&quot;:&quot;545B5B&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;545b5b&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14069,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17108,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17109,&quot;name&quot;:{&quot;en&quot;:&quot;333A3A&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;333a3a&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14070,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17109,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17111,&quot;name&quot;:{&quot;en&quot;:&quot;5E6868&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;5e6868&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14071,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17111,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17113,&quot;name&quot;:{&quot;en&quot;:&quot;495454&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;495454&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14072,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17113,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17115,&quot;name&quot;:{&quot;en&quot;:&quot;4C5656&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;4c5656&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14074,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17115,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17116,&quot;name&quot;:{&quot;en&quot;:&quot;498EE2&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;498ee2&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14075,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17116,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17117,&quot;name&quot;:{&quot;en&quot;:&quot;2B68AD&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;2b68ad&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14076,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17117,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17119,&quot;name&quot;:{&quot;en&quot;:&quot;E5B28E&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;e5b28e&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14077,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17119,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17120,&quot;name&quot;:{&quot;en&quot;:&quot;161616&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;161616&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14078,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17120,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:17123,&quot;name&quot;:{&quot;en&quot;:&quot;0C4C75&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;0c4c75&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:14080,&quot;created_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;updated_at&quot;:&quot;2019-08-29 08:42:31&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:17123,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:50444,&quot;name&quot;:{&quot;en&quot;:&quot;Illustrations&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;illustrations&quot;},&quot;type&quot;:&quot;segment&quot;,&quot;order_column&quot;:37176,&quot;created_at&quot;:&quot;2019-12-09 10:45:38&quot;,&quot;updated_at&quot;:&quot;2019-12-09 10:45:38&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:50444,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:50447,&quot;name&quot;:{&quot;en&quot;:&quot;People&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;people&quot;},&quot;type&quot;:&quot;segment&quot;,&quot;order_column&quot;:37179,&quot;created_at&quot;:&quot;2019-12-09 11:22:44&quot;,&quot;updated_at&quot;:&quot;2019-12-09 11:22:44&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:50447,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:53440,&quot;name&quot;:{&quot;en&quot;:&quot;Tire&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;tire&quot;},&quot;type&quot;:&quot;ml&quot;,&quot;order_column&quot;:40112,&quot;created_at&quot;:&quot;2019-12-31 06:06:49&quot;,&quot;updated_at&quot;:&quot;2019-12-31 06:06:49&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:53440,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:53441,&quot;name&quot;:{&quot;en&quot;:&quot;Vehicle&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;vehicle&quot;},&quot;type&quot;:&quot;ml&quot;,&quot;order_column&quot;:40113,&quot;created_at&quot;:&quot;2019-12-31 06:06:49&quot;,&quot;updated_at&quot;:&quot;2019-12-31 06:06:49&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:53441,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:53955,&quot;name&quot;:{&quot;en&quot;:&quot;Person&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;person&quot;},&quot;type&quot;:&quot;ml&quot;,&quot;order_column&quot;:40468,&quot;created_at&quot;:&quot;2020-01-03 04:03:55&quot;,&quot;updated_at&quot;:&quot;2020-01-03 04:03:55&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:53955,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:53973,&quot;name&quot;:{&quot;en&quot;:&quot;Recreation&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;recreation&quot;},&quot;type&quot;:&quot;ml&quot;,&quot;order_column&quot;:40486,&quot;created_at&quot;:&quot;2020-01-03 04:09:02&quot;,&quot;updated_at&quot;:&quot;2020-01-03 04:09:02&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:53973,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:59906,&quot;name&quot;:{&quot;en&quot;:&quot;Bicycle wheel&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;bicycle-wheel&quot;},&quot;type&quot;:&quot;ml&quot;,&quot;order_column&quot;:45558,&quot;created_at&quot;:&quot;2020-01-21 15:31:48&quot;,&quot;updated_at&quot;:&quot;2020-01-21 15:31:48&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:59906,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:59907,&quot;name&quot;:{&quot;en&quot;:&quot;Bicycle&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;bicycle&quot;},&quot;type&quot;:&quot;ml&quot;,&quot;order_column&quot;:45559,&quot;created_at&quot;:&quot;2020-01-21 15:31:48&quot;,&quot;updated_at&quot;:&quot;2020-01-21 15:31:48&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:59907,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:59908,&quot;name&quot;:{&quot;en&quot;:&quot;Bicycle part&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;bicycle-part&quot;},&quot;type&quot;:&quot;ml&quot;,&quot;order_column&quot;:45560,&quot;created_at&quot;:&quot;2020-01-21 15:31:48&quot;,&quot;updated_at&quot;:&quot;2020-01-21 15:31:48&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:59908,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:59909,&quot;name&quot;:{&quot;en&quot;:&quot;Bicycle frame&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;bicycle-frame&quot;},&quot;type&quot;:&quot;ml&quot;,&quot;order_column&quot;:45561,&quot;created_at&quot;:&quot;2020-01-21 15:31:48&quot;,&quot;updated_at&quot;:&quot;2020-01-21 15:31:48&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:59909,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:59910,&quot;name&quot;:{&quot;en&quot;:&quot;Cycling&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;cycling&quot;},&quot;type&quot;:&quot;ml&quot;,&quot;order_column&quot;:45562,&quot;created_at&quot;:&quot;2020-01-21 15:31:49&quot;,&quot;updated_at&quot;:&quot;2020-01-21 15:31:49&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:59910,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:59911,&quot;name&quot;:{&quot;en&quot;:&quot;Cycle sport&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;cycle-sport&quot;},&quot;type&quot;:&quot;ml&quot;,&quot;order_column&quot;:45563,&quot;created_at&quot;:&quot;2020-01-21 15:31:49&quot;,&quot;updated_at&quot;:&quot;2020-01-21 15:31:49&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:59911,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:106987,&quot;name&quot;:{&quot;en&quot;:&quot;165407&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;165407&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:85530,&quot;created_at&quot;:&quot;2020-07-20 07:42:41&quot;,&quot;updated_at&quot;:&quot;2020-07-20 07:42:41&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:106987,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:107005,&quot;name&quot;:{&quot;en&quot;:&quot;217C0C&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;217c0c&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:85539,&quot;created_at&quot;:&quot;2020-07-20 07:42:46&quot;,&quot;updated_at&quot;:&quot;2020-07-20 07:42:46&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:107005,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}},{&quot;id&quot;:107016,&quot;name&quot;:{&quot;en&quot;:&quot;238C0C&quot;},&quot;slug&quot;:{&quot;en&quot;:&quot;238c0c&quot;},&quot;type&quot;:&quot;colors&quot;,&quot;order_column&quot;:85548,&quot;created_at&quot;:&quot;2020-07-20 07:42:49&quot;,&quot;updated_at&quot;:&quot;2020-07-20 07:42:49&quot;,&quot;pivot&quot;:{&quot;taggable_id&quot;:793,&quot;tag_id&quot;:107016,&quot;taggable_type&quot;:&quot;App\\Entry&quot;}}]}"
+                });
+            } else {
+                Bus.$emit("AUTH_SIGNUP", {
+                    returnEmit: "REPORT_ANIMATION"
+                });
+            }
+        }
+        function convertGif() {
+                const file = "https://assets8.lottiefiles.com/datafiles/MUp3wlMDGtoK5FK/data.json";
+                const color = "ffffff";
+                const slug = "793-cycle-animation";
+            if (window.lf.user) {
+                window.open("/lottie-to-gif/convert?url="+file+"&bg_color="+color)
+            } else {
+                Bus.$emit("AUTH_SIGNUP", {
+                    title: "Before you convert this Lottie…",
+                    description:
+                        "Create an account to download 1000s of free animations, convert them to GIFs and share them freely.",
+                    returnUrl: slug,
+                    lottieUrl: file
+                });
+            }
+        }
+</script>
+
+</body>
+
+</html>
