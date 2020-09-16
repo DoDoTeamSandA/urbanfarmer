@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -40,6 +41,8 @@ public class Register extends AppCompatActivity {
     FirebaseAuth mAuth;
     private TextView RegisterAlready;
 
+    private Dialog dialog;
+
 /*
     private SignInButton GSignIn;
 */
@@ -54,6 +57,11 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+
+        dialog=new Dialog(this);
+
+        dialog.setContentView(R.layout.dialogbox);
 
         //Auth instance
 
@@ -141,6 +149,8 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                dialog.show();
+
                 //fecthing text from editText
 
                 String emailText = email.getText().toString();
@@ -176,6 +186,8 @@ public class Register extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+
+                    dialog.dismiss();
                     Toast.makeText(Register.this, "Registration successful", Toast.LENGTH_SHORT).show();
 
                     Intent intent=new Intent(Register.this,Login.class);
@@ -183,6 +195,7 @@ public class Register extends AppCompatActivity {
 
                     startActivity(intent);
                 }else {
+                    dialog.dismiss();
 
                     Toast.makeText(Register.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                     Toast.makeText(Register.this, "Please try again", Toast.LENGTH_SHORT).show();

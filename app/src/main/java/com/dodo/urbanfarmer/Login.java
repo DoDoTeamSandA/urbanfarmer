@@ -2,14 +2,17 @@ package com.dodo.urbanfarmer;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,6 +49,10 @@ public class Login extends AppCompatActivity {
 
        private GoogleSignInClient mGoogleSignInClient;
 
+       private ProgressBar progressBar;
+
+       private Dialog  dialog;
+
 
        private static final int signCode = 0007;
 
@@ -56,6 +63,11 @@ public class Login extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_login);
+
+            dialog=new Dialog(this);
+            dialog.setContentView(R.layout.dialogbox);
+            dialog.setTitle("Loading");
+
 
 
             mAuth = FirebaseAuth.getInstance();
@@ -81,6 +93,10 @@ public class Login extends AppCompatActivity {
             login.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    dialog.show();
+
+
                     String username = UsernameET.getText().toString();
                     String password = PasswaordET.getText().toString();
 
@@ -99,11 +115,13 @@ public class Login extends AppCompatActivity {
 
                                 if (task.isSuccessful()) {
                                     Toast.makeText(Login.this, "Logedin Sucessfully", Toast.LENGTH_SHORT).show();
+                                    dialog.dismiss();
 
                                     MainScreen();
 
 
                                 } else {
+                                    dialog.dismiss();
                                     Toast.makeText(Login.this, "Username and Password Doesn't Matches", Toast.LENGTH_SHORT).show();
                                 }
 
