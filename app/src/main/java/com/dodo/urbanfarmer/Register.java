@@ -149,7 +149,7 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                dialog.show();
+
 
                 //fecthing text from editText
 
@@ -162,7 +162,7 @@ public class Register extends AppCompatActivity {
                 } else if (TextUtils.isEmpty(passwordText) || passwordText.length() < 6) {
                     password.setError("Please fill and length should be more than 6");
                 } else {
-
+                    dialog.show();
                     newUserRegistration(emailText, passwordText);
                 }
             }
@@ -188,9 +188,10 @@ public class Register extends AppCompatActivity {
                 if(task.isSuccessful()){
 
                     dialog.dismiss();
+
                     Toast.makeText(Register.this, "Registration successful", Toast.LENGTH_SHORT).show();
 
-                    Intent intent=new Intent(Register.this,Login.class);
+                    Intent intent=new Intent(Register.this,SellerQuestion.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
                     startActivity(intent);
@@ -211,7 +212,7 @@ public class Register extends AppCompatActivity {
     }
 
 
-    private void signIn() {
+   /* private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, signCode);
     }
@@ -248,5 +249,5 @@ public class Register extends AppCompatActivity {
                 }
             }
         });
-    }
+    }*/
 }

@@ -41,7 +41,7 @@
                     android:orientation="horizontal"
                     android:padding="10dp">
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="140dp"
                         android:layout_height="140dp"
                         android:layout_marginStart="2dp"
@@ -53,7 +53,8 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
-                        <TextView
+                        <EditText
+                            android:id="@+id/Username"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -67,7 +68,8 @@
                             android:textColorHint="#123"
                             app:drawableStartCompat="@drawable/ic_baseline_perm_contact_calendar_24" />
 
-                        <TextView
+                        <EditText
+                            android:id="@+id/DOB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -88,6 +90,7 @@
                 </LinearLayout>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/ProfileCard_layout"
                     android:layout_width="match_parent"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -98,6 +101,7 @@
 
 
                     <ScrollView
+
                         android:layout_width="match_parent"
                         android:background="@drawable/question_border"
                         android:layout_height="match_parent">
@@ -126,7 +130,8 @@
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:text="Register here, sell your items and grow like a mountain"/>
-                            <TextView
+                            <EditText
+                                android:id="@+id/FullName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter your Full Name"
@@ -140,7 +145,8 @@
                                 android:padding="10dp"
                                 android:textSize="18dp"
                                 android:fontFamily="@font/fanwood_text"/>
-                            <TextView
+                            <EditText
+                                android:id="@+id/EmailAddress"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
@@ -155,7 +161,8 @@
                                 android:fontFamily="@font/fanwood_text"
                                 android:hint="Enter Your Email Address"/>
 
-                            <TextView
+                            <EditText
+                                android:id="@+id/CompanyName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
@@ -175,7 +182,8 @@
                                 android:layout_marginLeft="20dp"
                                 android:background="@drawable/textview"
                                 android:orientation="horizontal">
-                                <TextView
+                                <EditText
+                                    android:id="@+id/MobilerNumber"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="17dp"
@@ -191,7 +199,7 @@
                                     android:layout_marginBottom="5dp"
                                     android:layout_marginLeft="10dp"
                                     android:background="#123" />
-                                <TextView
+                                <Button
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:hint="Send OTP"
@@ -209,7 +217,8 @@
                                 android:background="@drawable/textview"
                                 android:layout_marginRight="20dp"
                                 android:orientation="horizontal">
-                                <TextView
+                                <EditText
+                                    android:id="@+id/AadharNumber"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="18dp"
@@ -225,7 +234,7 @@
                                     android:layout_marginBottom="5dp"
                                     android:layout_marginLeft="1dp"
                                     android:background="#123" />
-                                <TextView
+                                <Button
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:hint="Send Photo"
@@ -235,7 +244,8 @@
                                     android:textSize="13dp"
                                     android:layout_marginLeft="10dp"/>
                             </LinearLayout>
-                            <TextView
+                            <EditText
+                                android:id="@+id/Pincode"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
@@ -247,7 +257,8 @@
                                 android:textColorHint="#000"
                                 android:fontFamily="@font/fanwood_text"
                                 android:hint="Enter your Pincode"/>
-                            <TextView
+                            <EditText
+                                android:id="@+id/CityName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
@@ -259,7 +270,8 @@
                                 android:textColorHint="#000"
                                 android:hint="Enter Your City Name"
                                 android:textSize="17dp"/>
-                            <TextView
+                            <EditText
+                                android:id="@+id/StateName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
@@ -271,7 +283,8 @@
                                 android:textColorHint="#000"
                                 android:fontFamily="@font/fanwood_text"
                                 android:hint="Enter Your State Name"/>
-                            <TextView
+                            <EditText
+                                android:id="@+id/HomeAddress"
                                 android:layout_width="match_parent"
                                 android:layout_height="150dp"
                                 android:layout_marginTop="10dp"
@@ -283,7 +296,8 @@
                                 android:textColorHint="#000"
                                 android:hint="@string/Address"
                                 android:layout_marginRight="20dp"/>
-                            <TextView
+                            <EditText
+                                android:id="@+id/OfficeAddress"
                                 android:layout_width="match_parent"
                                 android:layout_height="150dp"
                                 android:layout_marginTop="20dp"
@@ -301,12 +315,14 @@
                                 android:layout_marginTop="30dp"
                                 android:orientation="horizontal">
                                 <Button
+                                    android:id="@+id/Savebtn"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Save"
                                    app:backgroundTint ="#123"
                                     android:layout_marginLeft="80dp"/>
                                 <Button
+                                    android:id="@+id/Editbtn"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     app:backgroundTint="#123"

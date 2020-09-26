@@ -94,7 +94,6 @@ public class Login extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    dialog.show();
 
 
                     String username = UsernameET.getText().toString();
@@ -108,6 +107,8 @@ public class Login extends AppCompatActivity {
 
                         PasswaordET.setError("Please Enter PassWord");
                     } else {
+                        dialog.show();
+
 
                         mAuth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
