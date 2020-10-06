@@ -4,6 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroPage">
+    android:background="@drawable/border"
+    tools:context=".Intropage">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonOnBoardingAction"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textSize="20sp"
+        app:cornerRadius="15sp"
+        android:padding="5dp"
+        app:backgroundTint="#123"
+        android:fontFamily="@font/aclonica"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonskip"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textSize="20sp"
+        android:alpha="1.5"
+        android:fontFamily="@font/aclonica"
+        android:padding="5dp"
+        android:textAllCaps="false"
+        app:cornerRadius="15sp"
+        android:text="Skip"
+        app:backgroundTint="#123"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/introviewpager"/>
+    <LinearLayout
+        android:id="@+id/introindicators"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        android:layout_marginEnd="20dp"
+        android:padding="25dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/buttonOnBoardingAction"
+        app:layout_constraintStart_toEndOf="@id/buttonskip"
+        app:layout_constraintTop_toTopOf="@id/buttonOnBoardingAction"
+        app:layout_constraintBottom_toBottomOf="@id/buttonOnBoardingAction"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,16 +27,11 @@ public class splashscreen extends AppCompatActivity {
                     startActivity(new Intent(splashscreen.this,MainActivity.class));
                     finish();
                 }else {
-                    Intent intent = new Intent(splashscreen.this,SplashScreen2.class);
+                    Intent intent = new Intent(splashscreen.this,Intropage.class);
                     startActivity(intent);
                     finish();
 
                 }
-
-
-
-
-
             }
         },SPLASH_SCREEN);
     }

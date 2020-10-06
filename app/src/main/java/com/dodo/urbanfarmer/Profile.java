@@ -11,6 +11,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,7 +31,8 @@ public class Profile extends AppCompatActivity {
     private Button Savebtn, Editbtn;
     private String usernameStr, DOBStr, FullNameStr, emailStr, ComapnyNameStr, PhoneNunberStr;
     private String AadharNumberStr, PincodeStr, CityNameStr, StateNameStr, HomeAddressStr, OfficeAddressStr;
-
+    private LinearLayout sellerprofile;
+    private LinearLayout viewerprofile;
     private FirebaseAuth mAuth;
     private FirebaseFirestore firebaseFirestore;
     private FirebaseUser firebaseUser;
@@ -43,12 +45,15 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        Bundle extras = getIntent().getExtras();
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
 
-        String yesString = null, noString = null;
+        String yesString = null;
+        String NoString = null;
+
 
         yesString = extras.getString("Yesbtn");
-        noString = extras.getString("Nobtn");
+        NoString = extras.getString("Yesbtn");
 
         //Widget declaration
         username = findViewById(R.id.Username);
@@ -65,6 +70,8 @@ public class Profile extends AppCompatActivity {
         OfficeAddress = findViewById(R.id.OfficeAddress);
         Savebtn = findViewById(R.id.Savebtn);
         Editbtn = findViewById(R.id.Editbtn);
+        sellerprofile =  (LinearLayout) findViewById(R.id.sellerprofile);
+        viewerprofile = (LinearLayout) findViewById(R.id.viewerprofile);
 
         //adding to arrayList
         EditTextValues = new ArrayList<>();
@@ -164,13 +171,13 @@ public class Profile extends AppCompatActivity {
         }
 
 
-        View cardLayout = findViewById(R.id.ProfileCard_layout);
+
 
         if (yesString.equals("Yes")) {
-            cardLayout.setVisibility(View.VISIBLE);
+            sellerprofile.setVisibility(View.VISIBLE);
 
-        } else {
-            cardLayout.setVisibility(View.INVISIBLE);
+        } if(NoString.equals("No")) {
+            viewerprofile.setVisibility(View.VISIBLE);
         }
 
 

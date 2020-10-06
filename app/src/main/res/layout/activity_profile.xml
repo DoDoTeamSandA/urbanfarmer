@@ -4,8 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/funky"
+    android:background="@drawable/coolbackground"
     tools:context=".Profile">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
 
     <RelativeLayout
         android:id="@+id/linearLayout2"
@@ -17,346 +27,387 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar3"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-
-            <LinearLayout
+            android:layout_height="wrap_content">
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="65dp"
-                android:orientation="vertical">
-
+                android:scrollbars="none">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:layout_width="140dp"
-                        android:layout_height="140dp"
-                        android:layout_marginStart="2dp"
-                        android:padding="10dp"
-                        android:src="@mipmap/ic_launcher" />
-
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/question_border"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
 
-                        <EditText
-                            android:id="@+id/Username"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginRight="10dp"
-                            android:background="@drawable/input_file"
-                            android:gravity="center"
-                            android:textSize="18dp"
-                            android:hint="Username"
-                            android:padding="8dp"
-                            android:textColorHint="#123"
-                            app:drawableStartCompat="@drawable/ic_baseline_perm_contact_calendar_24" />
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="2dp"
+                            android:padding="10dp"
+                            android:src="@mipmap/ic_launcher_round" />
 
-                        <EditText
-                            android:id="@+id/DOB"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginRight="10dp"
-                            android:background="@drawable/input_file"
-                            android:gravity="center"
-                            android:textSize="18dp"
-                            android:hint="DOB"
-                            android:padding="8dp"
-                            android:textColorHint="#123"
-                            app:drawableStartCompat="@drawable/ic_baseline_card_membership_24"/>
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/Username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="20dp"
+                                android:lines="1"
+                                android:textCursorDrawable="@drawable/cursor_color"
+                                android:inputType="textPersonName"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/input_file"
+                                android:gravity="center"
+                                android:hint="username"
+                                android:padding="8dp"
+                                android:textColorHint="#123"
+                                android:textSize="18dp"
+                                app:drawableStartCompat="@drawable/ic_baseline_perm_contact_calendar_24" />
+
+                            <EditText
+                                android:id="@+id/DOB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/input_file"
+                                android:gravity="center"
+                                android:hint="DOB"
+                                android:padding="8dp"
+                                android:textColorHint="#123"
+                                android:textSize="18dp"
+                                app:drawableStartCompat="@drawable/ic_baseline_card_membership_24" />
+
+                        </LinearLayout>
 
 
                     </LinearLayout>
 
-
-                </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/ProfileCard_layout"
-                    android:layout_width="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_height="match_parent">
-
-
-
-                    <ScrollView
-
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ProfileCard_layout"
                         android:layout_width="match_parent"
-                        android:background="@drawable/question_border"
-                        android:layout_height="match_parent">
-
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp">
 
                         <LinearLayout
+                            android:id="@+id/sellerprofile"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:background="@drawable/question_border"
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:fontFamily="cursive"
-                                android:textSize="40dp"
                                 android:layout_marginTop="10dp"
+                                android:fontFamily="cursive"
+                                android:gravity="center"
+                                android:text="Seller Registration"
                                 android:textColor="#000"
-                                android:text="Seller Registration"/>
+                                android:textSize="40dp" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="cursive"
                                 android:layout_marginTop="10dp"
-                                android:textColor="#000"
+                                android:fontFamily="cursive"
                                 android:gravity="center"
-                                android:textSize="30dp"
-                                android:text="Register here, sell your items and grow like a mountain"/>
+                                android:text="Register here, sell your items and grow like a mountain"
+                                android:textColor="#000"
+                                android:textSize="30dp" />
+
                             <EditText
                                 android:id="@+id/FullName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="Enter your Full Name"
-                                android:textColorHint="#000"
-                                android:layout_marginTop="40dp"
                                 android:layout_marginLeft="20dp"
-                                android:background="@drawable/textview"
+                                android:layout_marginTop="30dp"
                                 android:layout_marginRight="20dp"
-                                android:textCursorDrawable="@drawable/cursor_color"
+                                android:background="@drawable/textview"
+                                android:fontFamily="@font/fanwood_text"
                                 android:gravity="start"
+                                android:hint="Enter your Full Name"
                                 android:padding="10dp"
-                                android:textSize="18dp"
-                                android:fontFamily="@font/fanwood_text"/>
+                                android:textColorHint="#000"
+                                android:textCursorDrawable="@drawable/cursor_color"
+                                android:textSize="18dp" />
+
                             <EditText
                                 android:id="@+id/EmailAddress"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginTop="10dp"
-                                android:background="@drawable/textview"
-                                android:textSize="17dp"
                                 android:layout_marginRight="20dp"
-                                android:padding="10dp"
+                                android:background="@drawable/textview"
+                                android:fontFamily="@font/fanwood_text"
                                 android:gravity="start"
+                                android:hint="Enter Your Email Address"
+                                android:padding="10dp"
                                 android:textColorHint="#000"
                                 android:textCursorDrawable="@drawable/cursor_color"
-                                android:fontFamily="@font/fanwood_text"
-                                android:hint="Enter Your Email Address"/>
+                                android:textSize="17dp" />
 
                             <EditText
                                 android:id="@+id/CompanyName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:padding="10dp"
-                                android:fontFamily="@font/fanwood_text"
                                 android:layout_marginLeft="20dp"
-                                android:background="@drawable/textview"
+                                android:layout_marginTop="10dp"
                                 android:layout_marginRight="20dp"
-                                android:textSize="17dp"
+                                android:background="@drawable/textview"
+                                android:fontFamily="@font/fanwood_text"
+                                android:hint="Enter Your Company Name"
+                                android:padding="10dp"
                                 android:textColorHint="#000"
-                                android:hint="Enter Your Company Name"/>
+                                android:textSize="17dp" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginRight="20dp"
-                                android:layout_marginLeft="20dp"
                                 android:background="@drawable/textview"
                                 android:orientation="horizontal">
+
                                 <EditText
                                     android:id="@+id/MobilerNumber"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textSize="17dp"
-                                    android:fontFamily="@font/fanwood_text"
-                                    android:padding="10dp"
-                                    android:textColorHint="#000"
+                                    android:layout_marginEnd="10dp"
+                                    android:inputType="number"
+                                    android:background="@null"
                                     android:hint="Enter Your Mobile Number"
-                                    />
-                                <View
-                                    android:layout_width="0.9dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp"
-                                    android:layout_marginLeft="10dp"
-                                    android:background="#123" />
-                                <Button
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:hint="Send OTP"
-                                    android:textColorHint="#000"
                                     android:padding="10dp"
-                                    android:layout_marginRight="10dp"
-                                    android:textSize="14dp"
-                                    android:layout_marginLeft="16dp"/>
+                                    android:textColorHint="#000"
+                                    android:textSize="15.2dp" />
+
+                                <Button
+                                    android:id="@+id/sendotp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="15dp"
+                                    android:text="Send OTP"
+                                    app:backgroundTint="#123" />
+
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="20dp"
-                                android:background="@drawable/textview"
+                                android:layout_marginTop="10dp"
                                 android:layout_marginRight="20dp"
+                                android:background="@drawable/textview"
                                 android:orientation="horizontal">
+
                                 <EditText
                                     android:id="@+id/AadharNumber"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textSize="18dp"
-                                    android:fontFamily="@font/fanwood_text"
-                                    android:padding="10dp"
-                                    android:textColorHint="#000"
+                                    android:layout_marginEnd="10dp"
+                                    android:inputType="number"
+                                    android:background="@null"
+                                    android:layout_gravity="center"
                                     android:hint="Enter Your Aadhar Number"
-                                    />
-                                <View
-                                    android:layout_width="0.9dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp"
-                                    android:layout_marginLeft="1dp"
-                                    android:background="#123" />
-                                <Button
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:hint="Send Photo"
                                     android:padding="10dp"
                                     android:textColorHint="#000"
-                                    android:layout_marginRight="5dp"
-                                    android:textSize="13dp"
-                                    android:layout_marginLeft="10dp"/>
+                                    android:textSize="15dp" />
+
+                                <Button
+                                    android:id="@+id/sendphoto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="15dp"
+
+                                    android:text="Send photo"
+                                    app:backgroundTint="#123" />
+
+
                             </LinearLayout>
+
                             <EditText
                                 android:id="@+id/Pincode"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
-                                android:background="@drawable/textview"
                                 android:layout_marginTop="10dp"
-                                android:padding="10dp"
                                 android:layout_marginRight="20dp"
-                                android:textSize="17dp"
-                                android:textColorHint="#000"
+                                android:background="@drawable/textview"
                                 android:fontFamily="@font/fanwood_text"
-                                android:hint="Enter your Pincode"/>
+                                android:hint="Enter your Pincode"
+                                android:padding="10dp"
+                                android:inputType="textPostalAddress"
+                                android:textColorHint="#000"
+                                android:textSize="17dp" />
+
                             <EditText
                                 android:id="@+id/CityName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="20dp"
-                                android:background="@drawable/textview"
+                                android:layout_marginTop="10dp"
                                 android:layout_marginRight="20dp"
+                                android:background="@drawable/textview"
                                 android:fontFamily="@font/fanwood_text"
+                                android:hint="Enter Your City Name"
                                 android:padding="10dp"
                                 android:textColorHint="#000"
-                                android:hint="Enter Your City Name"
-                                android:textSize="17dp"/>
+                                android:textSize="17dp" />
+
                             <EditText
                                 android:id="@+id/StateName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
                                 android:layout_marginRight="20dp"
                                 android:background="@drawable/textview"
-                                android:layout_marginTop="10dp"
-                                android:padding="10dp"
-                                android:textSize="17dp"
-                                android:textColorHint="#000"
                                 android:fontFamily="@font/fanwood_text"
-                                android:hint="Enter Your State Name"/>
+                                android:hint="Enter Your State Name"
+                                android:padding="10dp"
+                                android:textColorHint="#000"
+                                android:textSize="17dp" />
+
                             <EditText
                                 android:id="@+id/HomeAddress"
                                 android:layout_width="match_parent"
                                 android:layout_height="150dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="20dp"
                                 android:background="@drawable/textview"
-                                android:padding="10dp"
                                 android:fontFamily="@font/fanwood_text"
-                                android:textSize="20dp"
-                                android:textColorHint="#000"
                                 android:hint="@string/Address"
-                                android:layout_marginRight="20dp"/>
+                                android:padding="10dp"
+                                android:textColorHint="#000"
+                                android:textSize="20dp" />
+
                             <EditText
                                 android:id="@+id/OfficeAddress"
                                 android:layout_width="match_parent"
                                 android:layout_height="150dp"
-                                android:layout_marginTop="20dp"
                                 android:layout_marginLeft="20dp"
-                                android:padding="10dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
                                 android:background="@drawable/textview"
                                 android:fontFamily="@font/fanwood_text"
-                                android:textSize="20dp"
-                                android:textColorHint="#000"
                                 android:hint="Office Address"
-                                android:layout_marginRight="20dp"/>
+                                android:padding="10dp"
+                                android:textColorHint="#000"
+                                android:textSize="20dp" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="30dp"
                                 android:orientation="horizontal">
+
                                 <Button
                                     android:id="@+id/Savebtn"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginLeft="90dp"
                                     android:text="Save"
-                                   app:backgroundTint ="#123"
-                                    android:layout_marginLeft="80dp"/>
+                                    app:backgroundTint="#123" />
+
                                 <Button
                                     android:id="@+id/Editbtn"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:backgroundTint="#123"
                                     android:layout_marginLeft="30dp"
-                                    android:text="Edit"/>
+                                    android:text="Edit"
+                                    app:backgroundTint="#123" />
                             </LinearLayout>
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="By clicking Save Button you agree to the Urban Farmer Terms of Service and Privacy policy "
-                                android:layout_marginTop="20dp"
                                 android:layout_gravity="center"
-                                android:gravity="center"
-                                android:textColor="#000"
-                                android:padding="10dp"
-                                android:fontFamily="@font/fanwood_text"
                                 android:layout_marginLeft="10dp"
+                                android:layout_marginTop="20dp"
                                 android:layout_marginRight="10dp"
-                                android:textSize="17dp"/>
-
-
+                                android:fontFamily="@font/fanwood_text"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="By clicking Save Button you agree to the Urban Farmer Terms of Service and Privacy policy "
+                                android:textColor="#000"
+                                android:textSize="17dp" />
                         </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </ScrollView>
 
-                    </ScrollView>
-                </androidx.cardview.widget.CardView>
-
-
-
-
-            </LinearLayout>
+        </RelativeLayout>
 
 
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/viewerprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Savebtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:text="Save"
+                app:backgroundTint="#123" />
+
+            <Button
+                android:id="@+id/Editbtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Edit"
+                app:backgroundTint="#123" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/fanwood_text"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="By clicking Save Button you agree to the Urban Farmer Terms of Service and Privacy policy "
+            android:textColor="#000"
+            android:textSize="23dp" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
