@@ -33,13 +33,15 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import org.w3c.dom.Text;
+
 import java.util.regex.Pattern;
 
 public class Register extends AppCompatActivity {
-    private EditText email,password;
+    private EditText email,password,Conform_password;
     private Button registerbtn;
     FirebaseAuth mAuth;
-    private TextView RegisterAlready;
+    private TextView RegisterAlready,Error_Text;
 
     private Dialog dialog;
 
@@ -72,6 +74,8 @@ public class Register extends AppCompatActivity {
         password=(EditText)findViewById(R.id.password);
         RegisterAlready =(TextView)findViewById(R.id.RegisterAlready);
         registerbtn=(Button)findViewById(R.id.registerbtn);
+        Conform_password=(EditText)findViewById(R.id.confirm_password);
+        Error_Text=(TextView)findViewById(R.id.ErrorText);
         //GSignIn = (SignInButton) findViewById(R.id.sign_in_button);
 
 
@@ -153,15 +157,21 @@ public class Register extends AppCompatActivity {
 
                 //fecthing text from editText
 
-                String emailText = email.getText().toString();
-                String passwordText = password.getText().toString();
+                String emailText = email.getText().toString().trim();
+                String passwordText = password.getText().toString().trim();
+                String confirm_password=Conform_password.getText().toString().trim();
 
                 //checking for null pointer exception
                 if (TextUtils.isEmpty(emailText) || !Patterns.EMAIL_ADDRESS.matcher(emailText).find()) {
                     email.setError("Please fill");
                 } else if (TextUtils.isEmpty(passwordText) || passwordText.length() < 6) {
                     password.setError("Please fill and length should be more than 6");
-                } else {
+                }else if(!passwordText.equals(confirm_password)){
+                    Error_Text.setVisibility(View.VISIBLE);
+                    Error_Text.setText("Passwoed and Conform Password doesn't match");
+
+                }
+                else {
                     dialog.show();
                     newUserRegistration(emailText, passwordText);
                 }
