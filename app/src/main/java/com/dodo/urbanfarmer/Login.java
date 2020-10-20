@@ -55,6 +55,7 @@ public class Login extends AppCompatActivity {
 
 
        private static final int signCode = 0007;
+       //Comments is add
 
 
       private CallbackManager callbackManager;
