@@ -11,11 +11,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="colorControlHighlight">#123</item>
-        <item name="android:buttonBarPositiveButtonStyle">@style/DialogButtonStyled</item>
-        <item name="android:buttonBarNegativeButtonStyle">@style/DialogButtonStyled</item>
-        <item name="android:buttonBarNeutralButtonStyle">@style/DialogButtonStyled</item>
         <item name="floatingActionButtonStyle">
-
             @style/floatingButton
         </item>
 
@@ -30,15 +26,6 @@
         <item name="colorAccent">#cc0033</item>
 
     </style>
-    <style name="DialogButtonStyled" parent="Theme.MaterialComponents.Light">
-        <item name="android:textColor">#123</item>
-    </style>
-
-
-
-
-
-
     <style name="Divider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
