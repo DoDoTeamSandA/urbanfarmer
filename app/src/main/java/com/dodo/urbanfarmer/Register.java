@@ -28,7 +28,6 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -42,9 +41,7 @@ public class Register extends AppCompatActivity {
     private EditText email,password,Conform_password;
     private Button registerbtn;
     FirebaseAuth mAuth;
-    private TextView RegisterAlready;
-
-    TextView Error_Text;
+    private TextView RegisterAlready,Error_Text;
 
     private Dialog dialog;
 
@@ -78,7 +75,7 @@ public class Register extends AppCompatActivity {
         RegisterAlready =(TextView)findViewById(R.id.RegisterAlready);
         registerbtn=(Button)findViewById(R.id.registerbtn);
         Conform_password=(EditText)findViewById(R.id.confirm_password);
-        Error_Text=(TextView) findViewById(R.id.ErrorText);
+        Error_Text=(TextView)findViewById(R.id.ErrorText);
         //GSignIn = (SignInButton) findViewById(R.id.sign_in_button);
 
 
