@@ -55,8 +55,6 @@ public class Login extends AppCompatActivity {
 
 
        private static final int signCode = 0007;
-       //Comments is add
-
 
       private CallbackManager callbackManager;
 
@@ -73,10 +71,6 @@ public class Login extends AppCompatActivity {
             dialog=new Dialog(this);
             dialog.setContentView(R.layout.dialogbox);
             dialog.setTitle("Loading");
-            dialog.setCancelable(false);
-            dialog.setCanceledOnTouchOutside(false);
-
-
 
 
 
@@ -147,6 +141,8 @@ public class Login extends AppCompatActivity {
 
 
             //Facebook Login
+
+
           loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
@@ -156,7 +152,6 @@ public class Login extends AppCompatActivity {
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
                     startActivity(intent);
-                    finish();
                 }
 
                 @Override
