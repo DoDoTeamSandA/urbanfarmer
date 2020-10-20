@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home"
+            />
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="Profile"/>
+        <item android:title="My Network"
+            android:icon="@drawable/ic_baseline_assignment_ind_24"
+            android:id="@+id/mynetwork"/>
+        <item
+            android:id="@+id/Search"
+            android:icon="@drawable/ic_baseline_search_24"
+            android:title="Search"
+            />
+    </group>
+
+
+    <item android:title="UF Bazaaar">
+        <menu>
+            <group android:checkableBehavior="all">
+                <item
+                    android:title="Go to Shop"
+                    android:icon="@drawable/ic_baseline_shopping_basket_24"
+                    android:id="@+id/shop"/>
+                <item
+                    android:id="@+id/shopbycategory"
+                    android:icon="@drawable/ic_baseline_widgets_24"
+                    android:title="Shop by Category " />
+                <item
+                    android:id="@+id/dealsoftheday"
+                    android:icon="@drawable/ic_baseline_local_offer_24"
+                    android:title="Deals of the Day" />
+                <item
+                    android:id="@+id/bucketlist"
+                    android:icon="@drawable/ic_baseline_bookmark_24"
+                    android:title="Bucket List"/>
+                <item
+                    android:id="@+id/yourorders"
+                    android:icon="@drawable/ic_baseline_local_grocery_store_24"
+                    android:title="Your Orders" />
+
+                <item
+                    android:id="@+id/sellonurbanfarmer"
+                    android:icon="@drawable/ic_baseline_local_mall_24"
+                    android:title="Sell on Urban Farmer" />
+
+            </group>
+        </menu>
+    </item>
+        <item
+            android:title="our services">
+        <group>
+            <menu>
+                <item
+                    android:id="@+id/OnlinePlantNursery"
+                    android:title="Online Plant Nursery"/>
+                <item
+                    android:id="@+id/learnfromus"
+                    android:title="Learn from us"/>
+
+
+            </menu>
+        </group>
+</item>
+
+<item android:title="Options" >
+    <menu>
+    <group
+        android:checkableBehavior="all">
+        <item
+            android:title="Settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:id="@+id/settings"/>
+
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_baseline_share_24"
+            android:title="Share"/>
+        <item
+            android:id="@+id/AboutUs"
+            android:icon="@drawable/ic_baseline_contact_support_24"
+            android:title="About Us"/>
+        <item
+            android:title="Log Out"
+            android:icon="@drawable/ic_baseline_lock_open_24"
+            android:id="@+id/logout"/>
+    </group>
+    </menu>
+</item>
+</menu>
+
+
+
