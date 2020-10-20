@@ -4,6 +4,13 @@
     <color name="colorPrimaryDark">#033249</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="colorblue">#033249</color>
-    <color name="colorNavIcon">#dae9f6</color>
+    <color name="colorNavIcon">#ffffff</color>
+    <color name="back8">#F7E11F</color>
+    <color name="black">#123</color>
     <color name="colorNavText">#01294b</color>
+    <color name="orange">#D6793B</color>
+    <color name="green_light">#AAB924</color>
+    <color name="pink">#E6BE165E</color>
+    <color name="Red">#D8192F</color>
+    <color name="light_pink">#CDFF93CB</color>
 </resources>

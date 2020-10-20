@@ -16,8 +16,11 @@ import com.google.android.material.button.MaterialButton;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Intropage extends AppCompatActivity {
     private final static int NUM_PAGES=3;
+    private int selectedPageIndex = -1;
+    private boolean exitWhenScrollNextPage =false;
     private ViewPager viewpager;
     private MaterialButton buttonOnBoardingAction,Skipbtn;
     private List<ImageView>dots;
@@ -36,8 +39,18 @@ public class Intropage extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 finish();
-
-
+            }
+        });
+        buttonOnBoardingAction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (selectedPageIndex == 2){
+                    Intent intent=new Intent(Intropage.this,SplashScreen2.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
+                }else
+                viewpager.setCurrentItem(getItem(+1),true);
             }
         });
         List<Introitem> mList = new ArrayList<>();
@@ -48,6 +61,11 @@ public class Intropage extends AppCompatActivity {
         IntroAdapter introadapter = new IntroAdapter(this, mList);
         viewpager.setAdapter(introadapter);
         setupintroindicators();
+    }
+
+    private int getItem(int i) {
+        return viewpager.getCurrentItem()+i;
+
     }
 
     private void setupintroindicators() {
@@ -69,19 +87,36 @@ public class Intropage extends AppCompatActivity {
 
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if(exitWhenScrollNextPage && position == NUM_PAGES - 1){
+                    exitWhenScrollNextPage = false;
+
+                }
 
             }
 
             @Override
             public void onPageSelected(int position) {
+                selectedPageIndex = position;
                   selectDot(position);
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
+                if (state == ViewPager.SCROLL_STATE_DRAGGING){
+                    if(selectedPageIndex == NUM_PAGES -1)
+                    launchNextScreen();
+                }
 
             }
         });
+
+    }
+
+    private void launchNextScreen() {
+        Intent intent=new Intent(Intropage.this,SplashScreen2.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
 
     }
 
