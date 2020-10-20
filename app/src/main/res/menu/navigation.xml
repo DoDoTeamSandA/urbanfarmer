@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/nav_hone"
         android:title="Home"
@@ -8,23 +9,27 @@
         />
     <item
         android:id="@+id/nav_Network"
-        android:title="My Network"
-        android:icon="@drawable/ic_baseline_network_check_24"
+        android:title="Search"
+        android:icon="@drawable/ic_baseline_search_24"
 
         />
+    <item
+        android:id="@+id/nav_add"
+        android:title="Add"
+        android:icon="@drawable/ic_baseline_add_box_24"/>
     <!--<item
 
         android:icon="@drawable/pluse_add"
         android:title=""/>-->
     <item
         android:id="@+id/nav_Shopping"
-    android:title="Shoping"
+    android:title="Shopping"
     android:icon="@drawable/ic_baseline_shopping_basket_24"
     />
     <item
         android:id="@+id/nav_Profile"
     android:title="Profile"
-    android:icon="@drawable/ic_baseline_pregnant_woman_24"
+    android:icon="@drawable/ic_baseline_account_circle_24"
 
     />
 

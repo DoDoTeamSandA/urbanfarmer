@@ -7,10 +7,31 @@
         <item name="colorPrimary">#fff</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:colorButtonNormal">#fff</item>
+        <item name="android:colorButtonNormal">#123</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorControlHighlight">#123</item>
+        <item name="floatingActionButtonStyle">
+            @style/floatingButton
+        </item>
+
     </style>
+    <style name="navigationTheme">
+    <item name="colorPrimary">#123</item>
+        <item name="colorControlHighlight">#123</item>
+
+    </style>
+    <style name="floatingButton">
+        <item name="colorPrimary">@color/green_light</item>
+        <item name="colorAccent">#cc0033</item>
+
+    </style>
+
+
+
+
+
+
     <style name="Divider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
