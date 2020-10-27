@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         //Floating
         //No idea
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestIdToken(getString(R.string.Web_ClientId))
                 .requestEmail()
                 .build();
 
