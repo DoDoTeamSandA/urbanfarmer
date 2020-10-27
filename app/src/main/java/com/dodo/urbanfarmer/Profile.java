@@ -1,29 +1,31 @@
 package com.dodo.urbanfarmer;
 
-import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.text.Layout;
+import android.provider.MediaStore;
 import android.util.Log;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import com.bumptech.glide.Glide;
+import com.dodo.urbanfarmer.databinding.ActivityProfileBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.auth.User;
 
-import java.security.PrivateKey;
+import java.net.URI;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Profile extends AppCompatActivity {
     private EditText username, DOB, FullName, email, ComapnyName, PhoneNunber;
@@ -40,22 +42,79 @@ public class Profile extends AppCompatActivity {
     private ArrayList<EditText> EditTextValues;
     private String UserId;
 
+    ActivityProfileBinding mBiniding;
+
+    private static final int PICK_IMAGE = 100;
+
+
+
+    private ProfileViewModel viewModel;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+       // setContentView(R.layout.activity_profile);
+
+        mBiniding= DataBindingUtil.setContentView(this,R.layout.activity_profile);
+         viewModel=new  ViewModelProvider(this).get(ProfileViewModel.class);
+        mBiniding.setLifecycleOwner(this);
+        mBiniding.setProfileView(viewModel);
+
+
+
+
+
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
         String yesString = null;
         String NoString = null;
 
+        mBiniding.sellerprofile.setVisibility(View.VISIBLE);
+/*
 
         yesString = extras.getString("Yesbtn");
         NoString = extras.getString("Yesbtn");
 
-        //Widget declaration
+        if (yesString.equals("Yes")) {
+            mBiniding.viewerprofile.setVisibility(View.VISIBLE);
+
+        } if(NoString.equals("No")) {
+
+        }
+*/
+
+
+        //Firebase Declarations
+        firebaseFirestore = FirebaseFirestore.getInstance();
+        mAuth = FirebaseAuth.getInstance();
+        firebaseUser=mAuth.getCurrentUser();
+
+
+        mBiniding.imgeView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+                startActivityForResult(gallery, PICK_IMAGE);
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*    //Widget declaration
         username = findViewById(R.id.Username);
         DOB = findViewById(R.id.DOB);
         FullName = findViewById(R.id.FullName);
@@ -117,7 +176,7 @@ public class Profile extends AppCompatActivity {
             UserId = mAuth.getCurrentUser().getUid();
 
 
-
+List
             Savebtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -232,8 +291,40 @@ public class Profile extends AppCompatActivity {
         }
 
     }
+*/
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode==PICK_IMAGE && resultCode==RESULT_OK) {
+
+            viewModel.uri.setValue(data.getDataString());
+
+
+            Log.i("TAG_A", "onActivityResult: "+viewModel.uri.getValue());
+
+            Glide.with(this).load(viewModel.uri.getValue()).into(mBiniding.imgeView);
 
 
 
 
+
+        }else{
+
+        }
+
+
+
+
+
+
+
+
+
+
+            }
 }

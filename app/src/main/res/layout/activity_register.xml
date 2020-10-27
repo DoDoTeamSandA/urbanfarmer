@@ -55,7 +55,7 @@
                         android:layout_marginTop="70dp"
                         android:orientation="vertical">
 
-                        <com.google.android.material.textfield.TextInputLayout
+                        <TextView
                             android:id="@+id/ErrorText"
                             android:background="#EB707F"
                             android:visibility="invisible"
