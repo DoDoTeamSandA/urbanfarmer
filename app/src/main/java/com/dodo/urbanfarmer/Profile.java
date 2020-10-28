@@ -59,9 +59,9 @@ public class Profile extends AppCompatActivity {
        // setContentView(R.layout.activity_profile);
 
         mBiniding= DataBindingUtil.setContentView(this,R.layout.activity_profile);
-         viewModel=new  ViewModelProvider(this).get(ProfileViewModel.class);
+        ProfileViewModel profileViewModel=new ProfileViewModel(this);
         mBiniding.setLifecycleOwner(this);
-        mBiniding.setProfileView(viewModel);
+        mBiniding.setProfileView(profileViewModel);
 
 
 
