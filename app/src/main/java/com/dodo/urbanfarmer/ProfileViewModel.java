@@ -2,6 +2,7 @@ package com.dodo.urbanfarmer;
 
 import android.app.Activity;
 import android.app.Application;
+import android.app.Dialog;
 import android.app.Instrumentation;
 import android.content.Context;
 import android.content.Intent;
@@ -9,8 +10,11 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.util.Patterns;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -47,7 +51,7 @@ import java.util.concurrent.TimeUnit;
 
 import static androidx.core.app.ActivityCompat.startActivityForResult;
 
-public class ProfileViewModel extends AndroidViewModel {
+public class ProfileViewModel extends ViewModel {
 
 
 
@@ -64,6 +68,9 @@ public class ProfileViewModel extends AndroidViewModel {
     public ArrayList<String> values;
     public MutableLiveData<Boolean> qus;
     private String mVerificationId;
+    private Dialog dialog;
+    public MutableLiveData<String> code;
+    Context context;
 
 
 
@@ -73,8 +80,8 @@ public class ProfileViewModel extends AndroidViewModel {
     private FirebaseFirestore firebaseFirestore;
     private FirebaseUser firebaseUser;
 
-    public ProfileViewModel(@NonNull Application application) {
-        super(application);
+    public ProfileViewModel(Context context) {
+        this.context=context;
         init();
         checkLength();
     }
@@ -85,6 +92,24 @@ public class ProfileViewModel extends AndroidViewModel {
           public void onChanged(String s) {
               if(s.length()==10){
                   SendOTP();
+                  dialog.show();
+                  Button button=dialog.findViewById(R.id.verifybtn);
+                  EditText codeText=dialog.findViewById(R.id.otpreciverET);
+                  code.observeForever(new Observer<String>() {
+                      @Override
+                      public void onChanged(String s) {
+                          codeText.setText(s);
+                      }
+                  });
+
+                  button.setOnClickListener(new View.OnClickListener() {
+                      @Override
+                      public void onClick(View v) {
+                           code.setValue(codeText.getText().toString().trim());
+
+                          verifyVerificationCode(code.getValue());
+                      }
+                  });
               }
           }
       });
@@ -118,6 +143,13 @@ public class ProfileViewModel extends AndroidViewModel {
         //Lists with values
         filedsList=Arrays.asList(fileds);
         values=new ArrayList<>();
+
+        //Dialog
+        dialog=new Dialog(context, R.style.Theme_AppCompat_Light_Dialog_Alert);
+        dialog.setContentView(R.layout.activity_o_t_p_verification);
+        //otp code
+        code=new MutableLiveData<>(" ");
+
 
 
     }
@@ -196,10 +228,10 @@ public class ProfileViewModel extends AndroidViewModel {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(getApplication(), "Sucess", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Sucess", Toast.LENGTH_SHORT).show();
                 }else {
 
-                    Toast.makeText(getApplication(), "failure", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "failure", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -219,7 +251,7 @@ public class ProfileViewModel extends AndroidViewModel {
     }
 
     public void SendOTP(){
-        Toast.makeText(getApplication(), "Please wait", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Please wait", Toast.LENGTH_SHORT).show();
         String mobile=PhoneNunberStr.getValue();
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 "+91" + mobile,
@@ -238,20 +270,20 @@ public class ProfileViewModel extends AndroidViewModel {
         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
 
             //Getting the code sent by SMS
-            String code = phoneAuthCredential.getSmsCode();
+             code.setValue(phoneAuthCredential.getSmsCode());
 
             //sometime the code is not detected automatically
             //in this case the code will be null
             //so user has to manually enter the code
             if (code != null) {
                 //verifying the code
-                verifyVerificationCode(code);
+                verifyVerificationCode(code.getValue());
             }
         }
 
         @Override
         public void onVerificationFailed(FirebaseException e) {
-            Toast.makeText(getApplication(), e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
         @Override
@@ -268,36 +300,20 @@ public class ProfileViewModel extends AndroidViewModel {
         //creating the credential
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, code);
 
+        if(code!=null){
+
+            qus.setValue(true);
+
+
+
+        }
+
         //signing the user
-        signInWithPhoneAuthCredential(credential);
+
+
     }
 
-    private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
-        mAuth.signInWithCredential(credential)
-                .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            //verification successful we will start the profile activity
-                            qus.setValue(true);
-                            Toast.makeText(getApplication(), "Verified Sucessfully", Toast.LENGTH_SHORT).show();
 
-                        } else {
-
-                            //verification unsuccessful.. display an error message
-
-                            String message = "Somthing is wrong, we will fix it soon...";
-
-                            if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
-                                message = "Invalid code entered...";
-                            }
-                            Toast.makeText(getApplication(), message, Toast.LENGTH_SHORT).show();
-
-
-                        }
-                    }
-                });
-    }
 
 
 
