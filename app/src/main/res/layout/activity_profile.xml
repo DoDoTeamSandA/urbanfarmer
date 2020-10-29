@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -12,9 +14,7 @@
 
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/coolbackground"
@@ -65,6 +65,7 @@
 
                                 <de.hdodenhof.circleimageview.CircleImageView
                                     android:id="@+id/imgeView"
+                                    android:onClick="@{()->ProfileView.onPicImage(100)}"
                                     android:layout_width="140dp"
                                     android:layout_height="140dp"
                                     android:layout_marginStart="2dp"
@@ -72,7 +73,7 @@
                                     android:src="@mipmap/ic_launcher"
 
 
-                                     />
+                                    />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -81,26 +82,25 @@
 
                                     <EditText
                                         android:id="@+id/Username"
-                                        android:text="@={ProfileView.usernameStr}"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="10dp"
                                         android:layout_marginTop="20dp"
-                                        android:lines="1"
-                                        android:textCursorDrawable="@drawable/cursor_color"
-                                        android:inputType="textPersonName"
                                         android:layout_marginRight="10dp"
                                         android:background="@drawable/input_file"
                                         android:gravity="center"
                                         android:hint="username"
+                                        android:inputType="textPersonName"
+                                        android:lines="1"
                                         android:padding="8dp"
+                                        android:text="@={ProfileView.usernameStr}"
                                         android:textColorHint="#123"
+                                        android:textCursorDrawable="@drawable/cursor_color"
                                         android:textSize="18dp"
                                         app:drawableStartCompat="@drawable/ic_baseline_perm_contact_calendar_24" />
 
                                     <EditText
                                         android:id="@+id/DOB"
-                                        android:text="@={ProfileView.DOBStr}"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="10dp"
@@ -109,7 +109,9 @@
                                         android:background="@drawable/input_file"
                                         android:gravity="center"
                                         android:hint="DOB"
+                                        android:onClick="@{()->ProfileView.onPickDate()}"
                                         android:padding="8dp"
+                                        android:text="@={ProfileView.DOBStr}"
                                         android:textColorHint="#123"
                                         android:textSize="18dp"
                                         app:drawableStartCompat="@drawable/ic_baseline_card_membership_24" />
@@ -225,11 +227,14 @@
                                             android:textColorHint="#000"
                                             android:textSize="15.2dp" />
 
-                                        <TextView
+                                        <Button
                                             android:id="@+id/sendotp"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_marginEnd="15dp"
+                                            android:text="send otp"
+                                            android:onClick="@{()->ProfileView.SendOTP()}"
+                                            android:background="@color/black"
                                             app:TextChange="@{ProfileView.qus}"
                                             app:backgroundTint="#123" />
 
@@ -259,11 +264,11 @@
                                             android:textSize="15dp" />
 
                                         <Button
-                                            android:id="@+id/sendphoto"
+                                            android:id="@+id/sendAadharphoto"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_marginEnd="15dp"
-
+                                            android:onClick="@{()->ProfileView.onPicImage(101)}"
                                             android:text="Send photo"
                                             app:backgroundTint="#123" />
 

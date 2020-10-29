@@ -10,14 +10,22 @@ import java.util.ArrayList;
 public class ProfilePojo {
     private String usernameStr, DOBStr, FullNameStr, emailStr, ComapnyNameStr, PhoneNunberStr;
     private String AadharNumberStr, PincodeStr, CityNameStr, StateNameStr, HomeAddressStr, OfficeAddressStr;
-    private String uri;
+    private String ProfiePicuri,AadherPicUri;
 
-    public String getUri() {
-        return uri;
+    public String getProfiePicuri() {
+        return ProfiePicuri;
     }
 
-    public void setUri(String uri) {
-        this.uri = uri;
+    public void setProfiePicuri(String profiePicuri) {
+        ProfiePicuri = profiePicuri;
+    }
+
+    public String getAadherPicUri() {
+        return AadherPicUri;
+    }
+
+    public void setAadherPicUri(String aadherPicUri) {
+        AadherPicUri = aadherPicUri;
     }
 
     public String getUsernameStr() {
@@ -146,7 +154,9 @@ public class ProfilePojo {
         array.add(getStateNameStr());
         array.add(getHomeAddressStr());
         array.add(getOfficeAddressStr());
-        array.add(getUri());
+        array.add(getProfiePicuri());
+        array.add(getAadherPicUri());
+
 
         return array;
 

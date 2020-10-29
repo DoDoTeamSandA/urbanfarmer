@@ -2,6 +2,7 @@ package com.dodo.urbanfarmer;
 
 import android.app.Activity;
 import android.app.Application;
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.Instrumentation;
 import android.content.Context;
@@ -12,6 +13,7 @@ import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,6 +46,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Observable;
@@ -62,8 +65,8 @@ public class ProfileViewModel extends ViewModel {
 
     public MutableLiveData<String> usernameStr, DOBStr, FullNameStr, emailStr, ComapnyNameStr, PhoneNunberStr;
     public MutableLiveData<String> AadharNumberStr, PincodeStr, CityNameStr, StateNameStr, HomeAddressStr, OfficeAddressStr;
-    public MutableLiveData<String> uri;
-    public  String [] fileds={"username","DOB","FullName","email","ComapnyName","PhoneNunber","AadharNumber","Pincode","CityName","StateName","HomeAddress","OfficeAddress","ProfilePicUri"};
+    public MutableLiveData<String> ProfilePicuri,aadharPicUri;
+    public  String [] fileds={"username","DOB","FullName","email","ComapnyName","PhoneNunber","AadharNumber","Pincode","CityName","StateName","HomeAddress","OfficeAddress","ProfilePicUri","AaadharPic"};
     public List<String> filedsList;
     public ArrayList<String> values;
     public MutableLiveData<Boolean> qus;
@@ -86,41 +89,9 @@ public class ProfileViewModel extends ViewModel {
         checkLength();
     }
 
-    private void checkLength() {
-      PhoneNunberStr.observeForever(new Observer<String>() {
-          @Override
-          public void onChanged(String s) {
-              if(s.length()==10){
-                  SendOTP();
-                  dialog.show();
-                  Button button=dialog.findViewById(R.id.verifybtn);
-                  EditText codeText=dialog.findViewById(R.id.otpreciverET);
-                  code.observeForever(new Observer<String>() {
-                      @Override
-                      public void onChanged(String s) {
-                          codeText.setText(s);
-                      }
-                  });
-
-                  button.setOnClickListener(new View.OnClickListener() {
-                      @Override
-                      public void onClick(View v) {
-                           code.setValue(codeText.getText().toString().trim());
-
-                          verifyVerificationCode(code.getValue());
-                      }
-                  });
-              }
-          }
-      });
-    }
-
 
     private void init() {
-
-
-
-        usernameStr= new MutableLiveData<>();
+     usernameStr= new MutableLiveData<>();
         DOBStr=new MutableLiveData<>();
         FullNameStr= new MutableLiveData<>();
         emailStr=new MutableLiveData<>();
@@ -133,7 +104,8 @@ public class ProfileViewModel extends ViewModel {
         HomeAddressStr=new MutableLiveData<>();
         OfficeAddressStr=new MutableLiveData<>();
         profilePojo=new ProfilePojo();
-        uri=new MutableLiveData<>();
+        ProfilePicuri=new MutableLiveData<>();
+        aadharPicUri=new MutableLiveData<>();
         qus=new MutableLiveData<>(false);
         //Firebase
         firebaseFirestore = FirebaseFirestore.getInstance();
@@ -154,12 +126,8 @@ public class ProfileViewModel extends ViewModel {
 
     }
 
-
+    // save button onclickListner
     public void onSubmitbtnClick(){
-
-
-
-
         try {
             profilePojo.setUsernameStr(usernameStr.getValue());
             profilePojo.setDOBStr(DOBStr.getValue());
@@ -173,19 +141,10 @@ public class ProfileViewModel extends ViewModel {
             profilePojo.setStateNameStr(StateNameStr.getValue());
             profilePojo.setHomeAddressStr(HomeAddressStr.getValue());
             profilePojo.setOfficeAddressStr(OfficeAddressStr.getValue());
-            profilePojo.setUri(uri.getValue());
-
-            Log.i("TAG_V", "onSubmitbtnClick: "+uri.getValue());
-
-
+            profilePojo.setProfiePicuri(ProfilePicuri.getValue());
+            profilePojo.setAadherPicUri(aadharPicUri.getValue());
 
             values.addAll(profilePojo.getValues());
-
-
-
-
-
-
 
             if(profilePojo.isValidate()){
 
@@ -194,23 +153,21 @@ public class ProfileViewModel extends ViewModel {
                 Uploadata(filedsList,values);
             }
 
-
-
+//            ((Activity) context).startActivityForResult(Intent.createChooser(intent, "Pictures: "), 1);
 
 
 
         }catch (Exception e){
             e.printStackTrace();
-            //Toast.makeText(getApplication(), "Please fill all values", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Please fill all values", Toast.LENGTH_SHORT).show();
 
 
         }
 
 
     }
-
-
-  public void Uploadata(List<String> filedsList,ArrayList<String> values){
+    //Firebase upload data button
+    public void Uploadata(List<String> filedsList,ArrayList<String> values){
 
         String Uid=firebaseUser.getUid();
 
@@ -239,42 +196,16 @@ public class ProfileViewModel extends ViewModel {
 
 
 
-
-
-
-
-
-
-
-
-
     }
-
-    public void SendOTP(){
-        Toast.makeText(context, "Please wait", Toast.LENGTH_SHORT).show();
-        String mobile=PhoneNunberStr.getValue();
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                "+91" + mobile,
-                60,
-                TimeUnit.SECONDS,
-                TaskExecutors.MAIN_THREAD,
-                mCallbacks);
-
-
-
-    }
-
     //the callback to detect the verification status
+
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
         @Override
         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
 
-            //Getting the code sent by SMS
              code.setValue(phoneAuthCredential.getSmsCode());
 
-            //sometime the code is not detected automatically
-            //in this case the code will be null
-            //so user has to manually enter the code
+
             if (code != null) {
                 //verifying the code
                 verifyVerificationCode(code.getValue());
@@ -290,42 +221,94 @@ public class ProfileViewModel extends ViewModel {
         public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
             super.onCodeSent(s, forceResendingToken);
 
-            //storing the verification id that is sent to the user
             mVerificationId = s;
         }
     };
 
-
+    // Phonenumnber verification
     private void verifyVerificationCode(String code) {
-        //creating the credential
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, code);
 
         if(code!=null){
 
             qus.setValue(true);
-
+            dialog.dismiss();
 
 
         }
 
-        //signing the user
 
 
     }
 
+    private void checkLength() {
+        PhoneNunberStr.observeForever(new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                if(s.length()==10){
+                    SendOTP();
+                    dialog.show();
+                    Button button=dialog.findViewById(R.id.verifybtn);
+                    EditText codeText=dialog.findViewById(R.id.otpreciverET);
+                    code.observeForever(new Observer<String>() {
+                        @Override
+                        public void onChanged(String s) {
+                            codeText.setText(s);
+                        }
+                    });
 
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            code.setValue(codeText.getText().toString().trim());
 
-
-
-    @BindingAdapter("imageUrl")
-    public static void PicPicker(ImageView image, Uri imageUri){
-
-        Glide.with(image.getContext()).load(imageUri).into(image);
+                            verifyVerificationCode(code.getValue());
+                        }
+                    });
+                }
+            }
+        });
+    }
+    // Phonenumnber verification
+    public void SendOTP() {
+        Toast.makeText(context, "Please wait", Toast.LENGTH_SHORT).show();
+        String mobile = PhoneNunberStr.getValue();
+        if (!mobile.isEmpty()) {
+            dialog.show();
+            PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                    "+91" + mobile,
+                    60,
+                    TimeUnit.SECONDS,
+                    TaskExecutors.MAIN_THREAD,
+                    mCallbacks);
+        }else {
+            Toast.makeText(context, "Please Enter Phone number", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
 
+    public void onPicImage(int reqCode){
+        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        ((Activity)context).startActivityForResult(gallery,reqCode);
+    }
 
+    public void onPickDate(){
+        Calendar calendar=Calendar.getInstance();
+        int year=calendar.get(Calendar.YEAR);
+        int month=calendar.get(Calendar.MONTH);
+        int day=calendar.get(Calendar.DAY_OF_MONTH);
+        DatePickerDialog datePickerDialog=new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                String s=dayOfMonth+"/"+month+"/"+year;
+
+                DOBStr.setValue(s);
+            }
+        },year,month,day);
+
+        datePickerDialog.show();
+    }
 
 
 
