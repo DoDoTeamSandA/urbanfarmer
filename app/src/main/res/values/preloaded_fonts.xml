@@ -3,6 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/aclonica</item>
         <item>@font/fanwood_text</item>
+        <item>@font/iceberg</item>
         <item>@font/jim_nightshade</item>
     </array>
 </resources>

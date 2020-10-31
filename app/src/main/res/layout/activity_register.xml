@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/urbanfarmerbg3"
+        android:background="@drawable/coolbackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -112,7 +112,7 @@
                             android:layout_marginLeft="40dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginRight="40dp"
-                            android:hint="Confirm Password"
+                            android:hint="Enter password again"
                             app:boxStrokeColor="#000"
                             app:endIconMode="password_toggle"
                             app:hintTextColor="#FF545E"

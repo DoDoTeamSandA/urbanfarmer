@@ -99,7 +99,7 @@
                                         android:textSize="18dp"
                                         app:drawableStartCompat="@drawable/ic_baseline_perm_contact_calendar_24" />
 
-                                    <EditText
+                                    <TextView
                                         android:id="@+id/DOB"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -221,6 +221,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginEnd="10dp"
                                             android:inputType="number"
+                                            android:layout_gravity="center"
                                             android:background="@null"
                                             android:hint="Enter Your Mobile Number"
                                             android:padding="10dp"
@@ -233,8 +234,11 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginEnd="15dp"
                                             android:text="send otp"
+                                            android:textSize="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="10dp"
                                             android:onClick="@{()->ProfileView.SendOTP()}"
-                                            android:background="@color/black"
+                                            android:background="@drawable/input_file"
                                             app:TextChange="@{ProfileView.qus}"
                                             app:backgroundTint="#123" />
 
@@ -268,8 +272,12 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_marginEnd="15dp"
+                                            android:textSize="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="10dp"
+                                            android:background="@drawable/input_file"
                                             android:onClick="@{()->ProfileView.onPicImage(101)}"
-                                            android:text="Send photo"
+                                            android:text="upload"
                                             app:backgroundTint="#123" />
 
 
