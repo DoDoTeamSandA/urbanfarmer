@@ -55,18 +55,22 @@
     </item>
         <item
             android:title="our services">
-        <group>
+
             <menu>
+                <group
+                    android:checkableBehavior="all">
                 <item
                     android:id="@+id/OnlinePlantNursery"
+                    android:icon="@drawable/ic_baseline_emoji_nature_24"
                     android:title="Online Plant Nursery"/>
                 <item
                     android:id="@+id/learnfromus"
+                    android:icon="@drawable/ic_baseline_emoji_people_24"
                     android:title="Learn from us"/>
 
-
+                </group>
             </menu>
-        </group>
+
 </item>
 
 <item android:title="Options" >
