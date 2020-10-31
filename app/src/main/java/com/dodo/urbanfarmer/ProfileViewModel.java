@@ -118,6 +118,7 @@ public class ProfileViewModel extends ViewModel {
 
         //Dialog
         dialog=new Dialog(context, R.style.Theme_AppCompat_Light_Dialog_Alert);
+
         dialog.setContentView(R.layout.activity_o_t_p_verification);
         //otp code
         code=new MutableLiveData<>(" ");
