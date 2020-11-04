@@ -139,6 +139,10 @@ public class ProfilePojo {
 
     }
 
+    public Boolean isViwerValidate(){
+        return !TextUtils.isEmpty(getUsernameStr()) && !TextUtils.isEmpty(getDOBStr()) && !TextUtils.isEmpty(getProfiePicuri());
+    }
+
     public ArrayList<String> getValues(){
 
         ArrayList<String> array=new ArrayList<>();
@@ -163,9 +167,6 @@ public class ProfilePojo {
     }
 
 
-    public String getSucessMessage(){
-        return "Welcome";
-    }
 
 
 
