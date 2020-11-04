@@ -130,11 +130,18 @@
 
                                 <LinearLayout
                                     android:id="@+id/sellerprofile"
+                                    android:visibility="gone"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@drawable/question_border"
                                     android:orientation="vertical"
-                                    android:visibility="visible">
+                                  >
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+
 
                                     <TextView
                                         android:layout_width="match_parent"
@@ -359,6 +366,8 @@
                                         android:textColorHint="#000"
                                         android:textSize="20dp" />
 
+                                    </LinearLayout>
+
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -425,6 +434,7 @@
 
                     <Button
                         android:id="@+id/Savebtn2"
+                        android:onClick="@{()->ProfileView.onSubmitbtnClick()}"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="90dp"

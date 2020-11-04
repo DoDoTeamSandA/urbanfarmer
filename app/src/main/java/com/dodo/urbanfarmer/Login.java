@@ -73,6 +73,10 @@ public class Login extends AppCompatActivity {
             dialog=new Dialog(this);
             dialog.setContentView(R.layout.dialogbox);
             dialog.setTitle("Loading");
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
+
+
 
 
 

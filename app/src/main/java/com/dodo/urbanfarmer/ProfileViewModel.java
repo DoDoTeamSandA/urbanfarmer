@@ -8,6 +8,7 @@ import android.app.Instrumentation;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.util.Patterns;
@@ -56,28 +57,26 @@ import static androidx.core.app.ActivityCompat.startActivityForResult;
 
 public class ProfileViewModel extends ViewModel {
 
-
-
-
-
-
     ProfilePojo profilePojo;
-
     public MutableLiveData<String> usernameStr, DOBStr, FullNameStr, emailStr, ComapnyNameStr, PhoneNunberStr;
     public MutableLiveData<String> AadharNumberStr, PincodeStr, CityNameStr, StateNameStr, HomeAddressStr, OfficeAddressStr;
     public MutableLiveData<String> ProfilePicuri,aadharPicUri;
     public  String [] fileds={"username","DOB","FullName","email","ComapnyName","PhoneNunber","AadharNumber","Pincode","CityName","StateName","HomeAddress","OfficeAddress","ProfilePicUri","AaadharPic"};
     public List<String> filedsList;
     public ArrayList<String> values;
-    public MutableLiveData<Boolean> qus;
+    public MutableLiveData<Boolean> qus,UserRole;
     private String mVerificationId;
     private Dialog dialog;
     public MutableLiveData<String> code;
+    private String mobile;
     Context context;
 
 
 
-    MutableLiveData<String> imageUri;
+
+
+
+
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore firebaseFirestore;
@@ -91,7 +90,9 @@ public class ProfileViewModel extends ViewModel {
 
 
     private void init() {
-     usernameStr= new MutableLiveData<>();
+        profilePojo=new ProfilePojo();
+
+        usernameStr= new MutableLiveData<>();
         DOBStr=new MutableLiveData<>();
         FullNameStr= new MutableLiveData<>();
         emailStr=new MutableLiveData<>();
@@ -103,18 +104,20 @@ public class ProfileViewModel extends ViewModel {
         StateNameStr=new MutableLiveData<>();
         HomeAddressStr=new MutableLiveData<>();
         OfficeAddressStr=new MutableLiveData<>();
-        profilePojo=new ProfilePojo();
         ProfilePicuri=new MutableLiveData<>();
         aadharPicUri=new MutableLiveData<>();
         qus=new MutableLiveData<>(false);
+        UserRole=new MutableLiveData<>(false);
+
         //Firebase
         firebaseFirestore = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
         firebaseUser=mAuth.getCurrentUser();
 
         //Lists with values
+
         filedsList=Arrays.asList(fileds);
-        values=new ArrayList<>();
+
 
         //Dialog
         dialog=new Dialog(context, R.style.Theme_AppCompat_Light_Dialog_Alert);
@@ -130,31 +133,37 @@ public class ProfileViewModel extends ViewModel {
     // save button onclickListner
     public void onSubmitbtnClick(){
         try {
-            profilePojo.setUsernameStr(usernameStr.getValue());
-            profilePojo.setDOBStr(DOBStr.getValue());
-            profilePojo.setFullNameStr(FullNameStr.getValue());
-            profilePojo.setEmailStr(emailStr.getValue().trim());
-            profilePojo.setComapnyNameStr(ComapnyNameStr.getValue());
-            profilePojo.setPhoneNunberStr(PhoneNunberStr.getValue());
-            profilePojo.setAadharNumberStr(AadharNumberStr.getValue());
-            profilePojo.setPincodeStr(PincodeStr.getValue());
-            profilePojo.setCityNameStr(CityNameStr.getValue());
-            profilePojo.setStateNameStr(StateNameStr.getValue());
-            profilePojo.setHomeAddressStr(HomeAddressStr.getValue());
-            profilePojo.setOfficeAddressStr(OfficeAddressStr.getValue());
-            profilePojo.setProfiePicuri(ProfilePicuri.getValue());
-            profilePojo.setAadherPicUri(aadharPicUri.getValue());
 
-            values.addAll(profilePojo.getValues());
+            if(UserRole.getValue()){
 
-            if(profilePojo.isValidate()){
+                setPojo();
+                if(profilePojo.isValidate()){
+                    values=new ArrayList<>();
+                    values.addAll(profilePojo.getValues());
 
-                Log.i("TAG_V", "u can update");
+                    Log.i("TAG_V", "All feilds ready");
+                    Uploadata(filedsList,values);
 
-                Uploadata(filedsList,values);
+                }else {
+                    Log.i("TAG_V", "false");
+                }
+            }else{
+                setViwerPojo();
+                if(profilePojo.isViwerValidate()){
+                    values=new ArrayList<>();
+                    values.addAll(profilePojo.getValues());
+
+                    Log.i("TAG_V", "u can update");
+
+                    Uploadata(filedsList,values);
+                }else {
+                    Log.i("TAG_V", "false");
+                }
             }
 
-//            ((Activity) context).startActivityForResult(Intent.createChooser(intent, "Pictures: "), 1);
+
+
+
 
 
 
@@ -169,7 +178,6 @@ public class ProfileViewModel extends ViewModel {
     }
     //Firebase upload data button
     public void Uploadata(List<String> filedsList,ArrayList<String> values){
-
         String Uid=firebaseUser.getUid();
 
       HashMap<String,String> map=new HashMap<>();
@@ -273,24 +281,36 @@ public class ProfileViewModel extends ViewModel {
     // Phonenumnber verification
     public void SendOTP() {
         Toast.makeText(context, "Please wait", Toast.LENGTH_SHORT).show();
-        String mobile = PhoneNunberStr.getValue();
-        if (!mobile.isEmpty()) {
-            dialog.show();
-            PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                    "+91" + mobile,
-                    60,
-                    TimeUnit.SECONDS,
-                    TaskExecutors.MAIN_THREAD,
-                    mCallbacks);
-        }else {
-            Toast.makeText(context, "Please Enter Phone number", Toast.LENGTH_SHORT).show();
+
+        try{
+
+            mobile = PhoneNunberStr.getValue();
+            if (!mobile.isEmpty()) {
+                dialog.show();
+                PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                        "+91" + mobile,
+                        60,
+                        TimeUnit.SECONDS,
+                        TaskExecutors.MAIN_THREAD,
+                        mCallbacks);
+            }else {
+                Toast.makeText(context, "Please Enter Phone number", Toast.LENGTH_SHORT).show();
+            }
+
+
+        }catch (Exception e){
+
+            Toast.makeText(context, "Please Enter Mobile Number", Toast.LENGTH_SHORT).show();
+
         }
+
+
 
     }
 
 
     public void onPicImage(int reqCode){
-        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        Intent gallery=new Intent(Intent.ACTION_PICK,MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         ((Activity)context).startActivityForResult(gallery,reqCode);
     }
 
@@ -311,7 +331,43 @@ public class ProfileViewModel extends ViewModel {
         datePickerDialog.show();
     }
 
+    public void setPojo(){
+        profilePojo.setUsernameStr(usernameStr.getValue());
+        profilePojo.setDOBStr(DOBStr.getValue());
+        profilePojo.setFullNameStr(FullNameStr.getValue());
+        profilePojo.setEmailStr(emailStr.getValue().trim());
+        profilePojo.setComapnyNameStr(ComapnyNameStr.getValue());
+        profilePojo.setPhoneNunberStr(PhoneNunberStr.getValue());
+        profilePojo.setAadharNumberStr(AadharNumberStr.getValue());
+        profilePojo.setPincodeStr(PincodeStr.getValue());
+        profilePojo.setCityNameStr(CityNameStr.getValue());
+        profilePojo.setStateNameStr(StateNameStr.getValue());
+        profilePojo.setHomeAddressStr(HomeAddressStr.getValue());
+        profilePojo.setOfficeAddressStr(OfficeAddressStr.getValue());
+        profilePojo.setProfiePicuri(ProfilePicuri.getValue());
+        profilePojo.setAadherPicUri(aadharPicUri.getValue());
 
+    }
+
+    public void setViwerPojo(){
+
+        profilePojo.setUsernameStr(usernameStr.getValue());
+        profilePojo.setDOBStr(DOBStr.getValue());
+        profilePojo.setFullNameStr("");
+        profilePojo.setEmailStr("");
+        profilePojo.setComapnyNameStr("");
+        profilePojo.setPhoneNunberStr("");
+        profilePojo.setAadharNumberStr("");
+        profilePojo.setPincodeStr("");
+        profilePojo.setCityNameStr("");
+        profilePojo.setStateNameStr("");
+        profilePojo.setHomeAddressStr("");
+        profilePojo.setOfficeAddressStr("");
+        profilePojo.setProfiePicuri(ProfilePicuri.getValue());
+        profilePojo.setAadherPicUri("");
+
+
+    }
 
 
 
