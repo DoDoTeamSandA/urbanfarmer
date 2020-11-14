@@ -2,13 +2,13 @@ package com.dodo.urbanfarmer;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -30,8 +30,12 @@ import java.util.ArrayList;
 
 public class Profile extends AppCompatActivity {
 
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore firebaseFirestore;
+    private FirebaseUser firebaseUser;
 
     ActivityProfileBinding mBiniding;
+    private static final int PICK_IMAGE = 100;
     public   ProfileViewModel profileViewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,28 +46,36 @@ public class Profile extends AppCompatActivity {
         profileViewModel=new ProfileViewModel(this);
         mBiniding.setLifecycleOwner(this);
         mBiniding.setProfileView(profileViewModel);
+
+
+
+
+
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
         String yesString = null;
         String NoString = null;
 
-
+        mBiniding.sellerprofile.setVisibility(View.VISIBLE);
+/*
 
         yesString = extras.getString("Yesbtn");
         NoString = extras.getString("Yesbtn");
 
         if (yesString.equals("Yes")) {
-            mBiniding.sellerprofile.setVisibility(View.VISIBLE);
-            profileViewModel.UserRole.setValue(true);
+            mBiniding.viewerprofile.setVisibility(View.VISIBLE);
 
         } if(NoString.equals("No")) {
-            mBiniding.viewerprofile.setVisibility(View.VISIBLE);
+
         }
+*/
 
 
-
-
+        //Firebase Declarations
+        firebaseFirestore = FirebaseFirestore.getInstance();
+        mAuth = FirebaseAuth.getInstance();
+        firebaseUser=mAuth.getCurrentUser();
 
 
     }
