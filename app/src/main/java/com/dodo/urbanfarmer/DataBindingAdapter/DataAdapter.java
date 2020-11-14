@@ -14,10 +14,10 @@ public class DataAdapter {
 
         if(value){
             btn.setText("Verified");
-            btn.setBackgroundColor(btn.getResources().getColor(R.color.green_light));
+            btn.setBackgroundColor(btn.getResources().getColor(R.color.green_light,null));
         }else {
             btn.setText("send otp");
-            btn.setBackgroundColor(btn.getResources().getColor(R.color.black));
+            btn.setBackgroundColor(btn.getResources().getColor(R.color.black,null));
         }
 
     }
