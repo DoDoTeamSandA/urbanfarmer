@@ -28,7 +28,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SellerQuestion"/>
-        <activity android:name=".Profile">
+        <activity android:name=".Profile"
+            android:windowSoftInputMode="adjustResize">
 
         </activity>
         <activity android:name=".MainActivity" />

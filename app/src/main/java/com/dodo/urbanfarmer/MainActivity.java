@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mAuth=FirebaseAuth.getInstance();
         toolbar =(Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitleTextAppearance(this,R.style.RobotoBoldTextAppearance);
         toolbar.setNavigationIcon(R.drawable.ic_baseline_dehaze_24);
         toolbar.setTitle("UrbanFarmer");
         navigationDrawer();

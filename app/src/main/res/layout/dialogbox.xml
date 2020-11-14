@@ -6,10 +6,10 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/dancer"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:layout_gravity="center"
-        android:src="@drawable/dinodance"
+        android:src="@drawable/progress3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

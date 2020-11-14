@@ -171,11 +171,13 @@ public class Register extends AppCompatActivity {
                     password.setError("Please fill and length should be more than 6");
                 }else if(!passwordText.equals(confirm_password)){
                     Error_Text.setVisibility(View.VISIBLE);
-                    Error_Text.setText("Passwoed and Conform Password doesn't match");
+                    Error_Text.setText("Password and Confirm Password doesn't match");
 
                 }
                 else {
                     dialog.show();
+                    dialog.setCancelable(false);
+                    dialog.setCanceledOnTouchOutside(false);
                     newUserRegistration(emailText, passwordText);
                 }
             }

@@ -112,6 +112,8 @@ public class Login extends AppCompatActivity {
 
                         PasswaordET.setError("Please Enter PassWord");
                     } else {
+                        dialog.setCancelable(false);
+                        dialog.setCanceledOnTouchOutside(false);
                         dialog.show();
 
 

@@ -27,7 +27,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 
-import com.airbnb.lottie.L;
+
 import com.bumptech.glide.Glide;
 import com.dodo.urbanfarmer.Pojos.ProfilePojo;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -55,11 +55,6 @@ import java.util.concurrent.TimeUnit;
 import static androidx.core.app.ActivityCompat.startActivityForResult;
 
 public class ProfileViewModel extends ViewModel {
-
-
-
-
-
 
     ProfilePojo profilePojo;
 

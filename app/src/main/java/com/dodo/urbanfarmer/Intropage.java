@@ -18,7 +18,7 @@ import java.util.List;
 
 
 public class Intropage extends AppCompatActivity {
-    private final static int NUM_PAGES=3;
+    private final static int NUM_PAGES=6;
     private int selectedPageIndex = -1;
     private boolean exitWhenScrollNextPage =false;
     private ViewPager viewpager;
@@ -44,7 +44,7 @@ public class Intropage extends AppCompatActivity {
         buttonOnBoardingAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (selectedPageIndex == 2){
+                if (selectedPageIndex == 5){
                     Intent intent=new Intent(Intropage.this,SplashScreen2.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
@@ -54,9 +54,12 @@ public class Intropage extends AppCompatActivity {
             }
         });
         List<Introitem> mList = new ArrayList<>();
-        mList.add(new Introitem(R.drawable.urbanfarmerbg3,"Learn and grow","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
-        mList.add(new Introitem(R.drawable.urbanfarmerbg3,"Learn and grow","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
-        mList.add(new Introitem(R.drawable.urbanfarmerbg3,"Learn and grow","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
+        mList.add(new Introitem(R.drawable.vegetables,"grow your food at home","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
+        mList.add(new Introitem(R.drawable.smartphone,"shop","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
+        mList.add(new Introitem(R.drawable.notes,"grow your food at home","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
+        mList.add(new Introitem(R.drawable.growplant,"grow your food at home","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
+        mList.add(new Introitem(R.drawable.teamwork,"grow your food at home","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
+        mList.add(new Introitem(R.drawable.smart,"Learn and grow","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
         viewpager = (ViewPager) findViewById(R.id.introviewpager);
         IntroAdapter introadapter = new IntroAdapter(this, mList);
         viewpager.setAdapter(introadapter);
@@ -87,7 +90,7 @@ public class Intropage extends AppCompatActivity {
 
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if(exitWhenScrollNextPage && position == NUM_PAGES - 1){
+                if(exitWhenScrollNextPage && position == NUM_PAGES-1){
                     exitWhenScrollNextPage = false;
 
                 }
@@ -103,7 +106,7 @@ public class Intropage extends AppCompatActivity {
             @Override
             public void onPageScrollStateChanged(int state) {
                 if (state == ViewPager.SCROLL_STATE_DRAGGING){
-                    if(selectedPageIndex == NUM_PAGES -1)
+                    if(selectedPageIndex == NUM_PAGES-1)
                     launchNextScreen();
                 }
 

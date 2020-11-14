@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/border"
+    android:background="@drawable/coolbackground"
     tools:context=".Intropage">
 
     <com.google.android.material.button.MaterialButton
@@ -15,11 +15,11 @@
         android:textSize="20sp"
         app:cornerRadius="15sp"
         android:padding="5dp"
-        app:backgroundTint="#123"
+        app:backgroundTint="#ffe"
         android:fontFamily="@font/aclonica"
         android:text="Next"
         android:textAllCaps="false"
-        android:textColor="#fff"
+        android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="20dp"/>
@@ -35,8 +35,8 @@
         android:textAllCaps="false"
         app:cornerRadius="15sp"
         android:text="Skip"
-        app:backgroundTint="#123"
-        android:textColor="#fff"
+        app:backgroundTint="#ffe"
+        android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="20dp"/>
@@ -49,9 +49,9 @@
         android:id="@+id/introindicators"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:orientation="horizontal"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="10dp"
         android:padding="25dp"
         android:gravity="center"
         app:layout_constraintEnd_toStartOf="@id/buttonOnBoardingAction"

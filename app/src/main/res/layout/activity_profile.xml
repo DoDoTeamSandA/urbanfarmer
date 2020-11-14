@@ -21,7 +21,7 @@
             tools:context=".Profile">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar3"
+                android:id="@+id/toolbarprofile"
                 android:layout_width="0dp"
                 android:layout_height="?actionBarSize"
                 app:layout_scrollFlags="scroll|enterAlways|snap"
@@ -48,6 +48,7 @@
                     <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+
                         android:scrollbars="none">
 
                         <LinearLayout
@@ -67,12 +68,10 @@
                                     android:id="@+id/imgeView"
                                     android:onClick="@{()->ProfileView.onPicImage(100)}"
                                     android:layout_width="140dp"
+                                    android:padding="5dp"
                                     android:layout_height="140dp"
                                     android:layout_marginStart="2dp"
-                                    android:padding="10dp"
-                                    android:src="@mipmap/ic_launcher"
-
-
+                                    android:src="@drawable/user"
                                     />
 
                                 <LinearLayout
@@ -89,7 +88,7 @@
                                         android:layout_marginRight="10dp"
                                         android:background="@drawable/input_file"
                                         android:gravity="center"
-                                        android:hint="username"
+                                        android:hint="Username"
                                         android:inputType="textPersonName"
                                         android:lines="1"
                                         android:padding="8dp"
@@ -114,7 +113,7 @@
                                         android:text="@={ProfileView.DOBStr}"
                                         android:textColorHint="#123"
                                         android:textSize="18dp"
-                                        app:drawableStartCompat="@drawable/ic_baseline_card_membership_24" />
+                                        app:drawableStartCompat="@drawable/ic_baseline_date_range_24" />
 
                                 </LinearLayout>
 

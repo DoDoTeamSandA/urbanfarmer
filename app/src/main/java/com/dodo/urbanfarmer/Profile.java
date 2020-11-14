@@ -2,6 +2,7 @@ package com.dodo.urbanfarmer;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
@@ -32,6 +33,7 @@ public class Profile extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseFirestore firebaseFirestore;
     private FirebaseUser firebaseUser;
+
     ActivityProfileBinding mBiniding;
     private static final int PICK_IMAGE = 100;
     public   ProfileViewModel profileViewModel;
@@ -42,8 +44,6 @@ public class Profile extends AppCompatActivity {
 
         mBiniding= DataBindingUtil.setContentView(this,R.layout.activity_profile);
         profileViewModel=new ProfileViewModel(this);
-
-
         mBiniding.setLifecycleOwner(this);
         mBiniding.setProfileView(profileViewModel);
 
@@ -76,7 +76,6 @@ public class Profile extends AppCompatActivity {
         firebaseFirestore = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
         firebaseUser=mAuth.getCurrentUser();
-
 
 
     }
