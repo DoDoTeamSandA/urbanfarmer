@@ -1,66 +1,69 @@
 package com.dodo.urbanfarmer;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.dodo.urbanfarmer.NavigationFragments.AddFragment;
 import com.dodo.urbanfarmer.NavigationFragments.HomeFragment;
 import com.dodo.urbanfarmer.NavigationFragments.NetWorkFragment;
 import com.dodo.urbanfarmer.NavigationFragments.ProfileFragment;
 import com.dodo.urbanfarmer.NavigationFragments.ShoppingFragment;
-import com.facebook.CallbackManager;
+import com.dodo.urbanfarmer.SideNavFragments.BucketListFragment;
+import com.dodo.urbanfarmer.SideNavFragments.CategoryFragment;
+import com.dodo.urbanfarmer.SideNavFragments.DealsFragment;
+import com.dodo.urbanfarmer.SideNavFragments.LearningBlogFragment;
+import com.dodo.urbanfarmer.SideNavFragments.NurseryFragment;
+import com.dodo.urbanfarmer.SideNavFragments.OrdersFragment;
+import com.dodo.urbanfarmer.SideNavFragments.SellersPageFragment;
+import com.dodo.urbanfarmer.SideNavFragments.SettingsFragment;
+import com.dodo.urbanfarmer.databinding.ActivityMainBinding;
 import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
-    private BottomNavigationView bottomNavigationView;
-    private DrawerLayout mdrawerlayout;
-    private Toolbar toolbar;
-    private NavigationView navigationView;
+    private ActivityMainBinding mainBinding;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+/*
         setContentView(R.layout.activity_main);
-        mdrawerlayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.navigation_view);
-        mAuth=FirebaseAuth.getInstance();
-        toolbar =(Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setTitleTextAppearance(this,R.style.RobotoBoldTextAppearance);
-        toolbar.setNavigationIcon(R.drawable.ic_baseline_dehaze_24);
-        toolbar.setTitle("UrbanFarmer");
+*/
+
+        mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        MainViewModel mainViewModel = new MainViewModel(this);
+        mainBinding.setLifecycleOwner(this);
+        mainBinding.setMainViewModel(mainViewModel);
+
+
+        mAuth = FirebaseAuth.getInstance();
+
+        //Actionbar Support
+        setSupportActionBar(mainBinding.toolbar);
         navigationDrawer();
 
+
         //BottomNavigationView declartion
-        bottomNavigationView=findViewById(R.id.MainBNB);
-        LoadFragment(new HomeFragment());
-        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+
         //Floating
         //No idea
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -68,29 +71,75 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 .requestEmail()
                 .build();
 
-        mGoogleSignInClient= GoogleSignIn.getClient(this,gso);
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     }
 
     private void navigationDrawer() {
-        navigationView.bringToFront();
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        mainBinding.navigationView.bringToFront();
+        mainBinding.navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
-                switch(item.getItemId()){
+
+                Fragment fragment=null;
+
+                switch (item.getItemId()) {
                     case R.id.logout:
                         logout();
                         break;
+                    case R.id.nav_home:
+                        fragment=new HomeFragment();
+                        break;
+                    case R.id.profile:
+                        fragment=new ProfileFragment();
+                        break;
+                    case R.id.mynetwork:
+                        fragment=new NetWorkFragment();
+                        break;
+                    case R.id.Search:
+                        fragment=new NetWorkFragment();
+                        break;
+                    case R.id.shop:
+                        fragment=new ShoppingFragment();
+                        break;
+                    case R.id.shopbycategory:
+                        fragment=new CategoryFragment();
+                        break;
+                    case R.id.dealsoftheday:
+                        fragment=new DealsFragment();
+                        break;
+                    case R.id.bucketlist:
+                        fragment=new BucketListFragment();
+                        break;
+                    case R.id.yourorders:
+                        fragment=new OrdersFragment();
+                        break;
+                    case R.id.sellonurbanfarmer:
+                        fragment=new SellersPageFragment();
+                        break;
+                    case R.id.learnfromus:
+                        fragment=new LearningBlogFragment();
+                        break;
+                    case R.id.OnlinePlantNursery:
+                        fragment=new NurseryFragment();
+                        break;
+                    case R.id.settings:
+                        fragment=new SettingsFragment();
+                        break;
                 }
-                return true;
+
+                mainBinding.drawerlayout.closeDrawer(GravityCompat.START);
+
+
+                return LoadFragment(fragment);
             }
         });
-        navigationView.setCheckedItem(R.id.nav_home);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        mainBinding.navigationView.setCheckedItem(R.id.nav_home);
+        mainBinding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mdrawerlayout.isDrawerVisible(GravityCompat.START)) {
-                    mdrawerlayout.closeDrawer(GravityCompat.START);
-                } else mdrawerlayout.openDrawer(GravityCompat.START);
+                if (mainBinding.drawerlayout.isDrawerVisible(GravityCompat.START)) {
+                    mainBinding.drawerlayout.closeDrawer(GravityCompat.START);
+                } else mainBinding.drawerlayout.openDrawer(GravityCompat.START);
             }
         });
     }
@@ -101,9 +150,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         sendToLogin();
         LoginManager.getInstance().logOut();
     }
+
     private void sendToLogin() {
         if (mAuth.getCurrentUser() == null) {
-            Intent intent=new Intent(MainActivity.this,Login.class);
+            Intent intent = new Intent(MainActivity.this, Login.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             finish();
@@ -111,13 +161,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
     }
 
-    private boolean LoadFragment(Fragment fragment){
-        if(fragment!=null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_Container,fragment).commit();
-            return true;
-        }
-        return false;
-    }
 
     private void signOut() {
         mGoogleSignInClient.signOut()
@@ -125,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
 
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             Toast.makeText(MainActivity.this, ":Logged Out", Toast.LENGTH_SHORT).show();
                         }
 
@@ -133,36 +176,25 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 });
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        Fragment fragment=null;
-
-        switch (item.getItemId()){
-            case R.id.nav_hone:
-                fragment=new HomeFragment();
-                break;
-            case R.id.nav_Network:
-                fragment=new NetWorkFragment();
-                break;
-            case R.id.nav_add:
-                fragment=new AddFragment();
-                break;
-            case R.id.nav_Profile:
-                fragment=new ProfileFragment();
-                break;
-            case R.id.nav_Shopping:
-                fragment=new ShoppingFragment();
-                break;
-        }
-
-        return LoadFragment(fragment);
-    }
     @Override
     public void onBackPressed() {
-        if (mdrawerlayout.isDrawerVisible(GravityCompat.START)){
-            mdrawerlayout.closeDrawer(GravityCompat.START);
-        }else
+        if (mainBinding.drawerlayout.isDrawerVisible(GravityCompat.START)) {
+            mainBinding.drawerlayout.closeDrawer(GravityCompat.START);
+        } else
             super.onBackPressed();
     }
+
+    private boolean LoadFragment(Fragment fragment) {
+        if (fragment != null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.Fragment_Container, fragment)
+                    .commit();
+
+            return true;
+        }
+        return false;
+    }
+
 }

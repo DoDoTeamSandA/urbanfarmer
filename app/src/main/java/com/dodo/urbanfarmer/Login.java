@@ -49,19 +49,15 @@ public class Login extends AppCompatActivity {
 
        private GoogleSignInClient mGoogleSignInClient;
 
-       private ProgressBar progressBar;
 
        private Dialog  dialog;
 
 
        private static final int signCode = 0007;
-       //Comments is add
 
       private CallbackManager callbackManager;
 
-      //please add my code
 
-    //iam here
 
 
         @Override
