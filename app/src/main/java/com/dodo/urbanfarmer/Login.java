@@ -178,10 +178,12 @@ public class Login extends AppCompatActivity {
 
             mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
+
             GSignIn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     signIn();
+                    GSignIn.setColorScheme(SignInButton.COLOR_DARK);
 
                 }
             });
