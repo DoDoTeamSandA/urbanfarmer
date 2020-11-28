@@ -69,9 +69,6 @@ public class MainViewModel extends ViewModel implements BottomNavigationView.OnN
                 case R.id.nav_Shopping:
                     fragment=new ShoppingFragment();
                     break;
-                case R.id.logout:
-                    Toast.makeText(context, "Hi iam logour", Toast.LENGTH_SHORT).show();
-                    break;
             }
 
             return LoadFragment(fragment);

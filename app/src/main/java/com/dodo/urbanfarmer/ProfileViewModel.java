@@ -195,6 +195,8 @@ public class ProfileViewModel extends ViewModel {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(context, "Sucess", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(context,MainActivity.class);
+                    context.startActivity(i);
                 }else {
 
                     Toast.makeText(context, "failure", Toast.LENGTH_SHORT).show();

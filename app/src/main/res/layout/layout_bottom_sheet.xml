@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="start"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:drawableStart="@drawable/ic_baseline_image_24"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:paddingLeft="70dp"
+        android:text="Add a photo"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="start"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:drawableStart="@drawable/ic_baseline_videocam_24"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:paddingLeft="70dp"
+        android:text="Take a Video"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="start"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:drawableStart="@drawable/ic_baseline_format_list_bulleted_24"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:paddingLeft="70dp"
+        android:text="Create a poll"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="start"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:drawableStart="@drawable/ic_baseline_motion_photos_on_24"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:paddingLeft="70dp"
+        android:text="Share a story"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="start"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:drawableStart="@drawable/ic_baseline_add_box_24"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:paddingLeft="70dp"
+        android:text="Add a product"/>
+
+</LinearLayout>

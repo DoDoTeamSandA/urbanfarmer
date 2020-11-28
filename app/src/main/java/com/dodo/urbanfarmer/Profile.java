@@ -78,7 +78,7 @@ public class Profile extends AppCompatActivity {
         }else if(requestCode==101 && resultCode==RESULT_OK){
             profileViewModel.aadharPicUri.setValue(data.getDataString());
             mBiniding.sendAadharphoto.setText("Uploaded");
-            mBiniding.sendAadharphoto.setBackgroundColor(getResources().getColor(R.color.green_light));
+            mBiniding.sendAadharphoto.setBackgroundColor(getResources().getColor(R.color.green_light,null));
         }
 
 

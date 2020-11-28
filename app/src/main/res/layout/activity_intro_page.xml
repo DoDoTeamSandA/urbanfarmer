@@ -4,61 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/coolbackground"
+    android:background="#ffe"
     tools:context=".Intropage">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonOnBoardingAction"
+        android:id="@+id/login"
+        android:layout_width="165dp"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="15dp"
-        android:textSize="20sp"
-        app:cornerRadius="15sp"
-        android:padding="5dp"
-        app:backgroundTint="#ffe"
-        android:fontFamily="@font/aclonica"
-        android:text="Next"
+        android:text="Sign in"
         android:textAllCaps="false"
-        android:textColor="#000"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:backgroundTint="@color/Red"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="20dp"/>
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonskip"
+        android:id="@+id/Register"
+        android:layout_width="165dp"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="15dp"
-        android:textSize="20sp"
         android:alpha="1.5"
-        android:fontFamily="@font/aclonica"
-        android:padding="5dp"
+        android:text="Register"
         android:textAllCaps="false"
-        app:cornerRadius="15sp"
-        android:text="Skip"
-        app:backgroundTint="#ffe"
-        android:textColor="#000"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:backgroundTint="#000"
         app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/guestlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign in as guest"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:backgroundTint="@color/Red"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/introviewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/introviewpager"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/introindicators"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:orientation="horizontal"
-        android:layout_marginEnd="10dp"
-        android:padding="25dp"
+        android:layout_marginBottom="30dp"
         android:gravity="center"
-        app:layout_constraintEnd_toStartOf="@id/buttonOnBoardingAction"
-        app:layout_constraintStart_toEndOf="@id/buttonskip"
-        app:layout_constraintTop_toTopOf="@id/buttonOnBoardingAction"
-        app:layout_constraintBottom_toBottomOf="@id/buttonOnBoardingAction"/>
-
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/introviewpager"
+        app:layout_constraintBottom_toTopOf="@id/Register"
+        app:layout_constraintEnd_toEndOf="@+id/introviewpager"
+        app:layout_constraintStart_toStartOf="@+id/introviewpager"
+        app:layout_constraintTop_toTopOf="@+id/introviewpager"
+        app:layout_constraintVertical_bias="2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

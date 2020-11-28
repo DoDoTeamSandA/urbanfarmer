@@ -64,6 +64,8 @@ public class Register extends AppCompatActivity {
         dialog=new Dialog(this);
 
         dialog.setContentView(R.layout.dialogbox);
+        dialog.setCancelable(false);
+        dialog.setCanceledOnTouchOutside(true);
 
         //Auth instance
 

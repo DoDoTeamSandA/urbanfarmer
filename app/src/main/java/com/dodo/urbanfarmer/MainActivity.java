@@ -16,6 +16,7 @@ import com.dodo.urbanfarmer.NavigationFragments.HomeFragment;
 import com.dodo.urbanfarmer.NavigationFragments.NetWorkFragment;
 import com.dodo.urbanfarmer.NavigationFragments.ProfileFragment;
 import com.dodo.urbanfarmer.NavigationFragments.ShoppingFragment;
+import com.dodo.urbanfarmer.SideNavFragments.AboutUsFragment;
 import com.dodo.urbanfarmer.SideNavFragments.BucketListFragment;
 import com.dodo.urbanfarmer.SideNavFragments.CategoryFragment;
 import com.dodo.urbanfarmer.SideNavFragments.DealsFragment;
@@ -95,9 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.mynetwork:
                         fragment=new NetWorkFragment();
                         break;
-                    case R.id.Search:
-                        fragment=new NetWorkFragment();
-                        break;
+
                     case R.id.shop:
                         fragment=new ShoppingFragment();
                         break;
@@ -124,6 +123,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.settings:
                         fragment=new SettingsFragment();
+                        break;
+                    case R.id.AboutUs:
+                        fragment=new AboutUsFragment();
                         break;
                 }
 

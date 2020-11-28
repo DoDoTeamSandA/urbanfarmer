@@ -16,25 +16,25 @@
 
        <RelativeLayout
            android:layout_width="wrap_content"
-           android:layout_marginTop="10dp"
+           android:layout_marginTop="30dp"
            android:layout_height="wrap_content">
            <com.google.android.material.card.MaterialCardView
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_marginLeft="20dp"
-               android:layout_marginTop="25dp"
+               android:layout_marginTop="10dp"
                android:layout_marginRight="20dp"
                app:cardCornerRadius="10dp"
                app:strokeColor="#123"
                app:strokeWidth="2dp">
                <RelativeLayout
                    android:layout_width="match_parent"
-                   android:background="@drawable/question_border"
+
                    android:layout_height="match_parent">
                    <TextView
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:layout_marginTop="15dp"
+                       android:layout_marginTop="10dp"
                        android:fontFamily="cursive"
                        android:gravity="center"
                        android:text="Hey!welcome"
@@ -159,20 +159,9 @@
                            android:paddingTop="10dp"
                            android:paddingBottom="10dp"
                            android:layout_marginLeft="70dp"
-                           android:layout_marginTop="20dp"
+                           android:layout_marginTop="10dp"
                            android:layout_marginRight="70dp"
                            android:layout_marginBottom="10dp" />
-
-
-                       <TextView
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="center"
-                           android:layout_marginTop="10dp"
-                           android:text="OR"
-                           android:textColor="#000"
-                           android:textSize="20dp"
-                           android:textStyle="bold" />
 
                        <com.google.android.gms.common.SignInButton
                            android:id="@+id/sign_in_button"

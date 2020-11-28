@@ -10,7 +10,7 @@
     <item
         android:id="@+id/nav_Network"
         android:title="Network"
-        android:icon="@drawable/ic_baseline_network_check_24"
+        android:icon="@drawable/ic_baseline_assessment_24"
 
         />
     <item

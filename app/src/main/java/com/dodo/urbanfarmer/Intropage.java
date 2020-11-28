@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,34 +16,57 @@ import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class Intropage extends AppCompatActivity {
     private final static int NUM_PAGES=6;
-    private int selectedPageIndex = -1;
+    private int selectedPageIndex = 0;
+    private Timer timer;
+    private final long DELAY_MS = 800;
+    private final long PERIOD_MS = 1000;
     private boolean exitWhenScrollNextPage =false;
     private ViewPager viewpager;
-    private MaterialButton buttonOnBoardingAction,Skipbtn;
+    private MaterialButton register,login,guestbtn;
     private List<ImageView>dots;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro_page);
-        buttonOnBoardingAction = findViewById(R.id.buttonOnBoardingAction);
-        Skipbtn=findViewById(R.id.buttonskip);
+        login = findViewById(R.id.login);
+        register=findViewById(R.id.Register);
+        guestbtn=findViewById(R.id.guestlogin);
 
-        Skipbtn.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent=new Intent(Intropage.this,SplashScreen2.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                Intent intent=new Intent(Intropage.this,Login.class);
                 startActivity(intent);
-                finish();
+
             }
         });
-        buttonOnBoardingAction.setOnClickListener(new View.OnClickListener() {
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(Intropage.this,Register.class);
+                startActivity(intent);
+
+            }
+        });
+        guestbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(Intropage.this,MainActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+        /* @Override
             public void onClick(View v) {
                 if (selectedPageIndex == 5){
                     Intent intent=new Intent(Intropage.this,SplashScreen2.class);
@@ -52,18 +76,35 @@ public class Intropage extends AppCompatActivity {
                 }else
                 viewpager.setCurrentItem(getItem(+1),true);
             }
-        });
+        });*/
         List<Introitem> mList = new ArrayList<>();
-        mList.add(new Introitem(R.drawable.vegetables,"grow your food at home","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
-        mList.add(new Introitem(R.drawable.smartphone,"shop","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
-        mList.add(new Introitem(R.drawable.notes,"grow your food at home","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
-        mList.add(new Introitem(R.drawable.growplant,"grow your food at home","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
-        mList.add(new Introitem(R.drawable.teamwork,"grow your food at home","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
-        mList.add(new Introitem(R.drawable.smart,"Learn and grow","By using UrbanFarmer Learn how to Grow Your own Food in your Own Home."));
+        mList.add(new Introitem(R.drawable.introimage6));
+        mList.add(new Introitem(R.drawable.introimage1));
+        mList.add(new Introitem(R.drawable.introimage2));
+        mList.add(new Introitem(R.drawable.introimage3));
+        mList.add(new Introitem(R.drawable.introimage4));
+        mList.add(new Introitem(R.drawable.introimage5));
+
         viewpager = (ViewPager) findViewById(R.id.introviewpager);
         IntroAdapter introadapter = new IntroAdapter(this, mList);
         viewpager.setAdapter(introadapter);
         setupintroindicators();
+        final Handler handler = new Handler();
+        final Runnable update = new Runnable() {
+            @Override
+            public void run() {
+                if (selectedPageIndex == NUM_PAGES){
+                    selectedPageIndex = 0;
+                }viewpager.setCurrentItem(selectedPageIndex++,true);
+            }
+        };
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(update);
+            }
+        },DELAY_MS,PERIOD_MS);
     }
 
     private int getItem(int i) {
@@ -105,10 +146,10 @@ public class Intropage extends AppCompatActivity {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-                if (state == ViewPager.SCROLL_STATE_DRAGGING){
-                    if(selectedPageIndex == NUM_PAGES-1)
+                /*if (state == ViewPager.SCROLL_STATE_DRAGGING){
+                    if(selectedPageIndex == NUM_PAGES)
                     launchNextScreen();
-                }
+                }*/
 
             }
         });
