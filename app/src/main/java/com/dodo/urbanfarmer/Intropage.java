@@ -6,11 +6,14 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.VideoView;
 
 import com.google.android.material.button.MaterialButton;
 
@@ -21,15 +24,21 @@ import java.util.TimerTask;
 
 
 public class Intropage extends AppCompatActivity {
-    private final static int NUM_PAGES=6;
+    private final static int NUM_PAGES=5;
     private int selectedPageIndex = 0;
     private Timer timer;
-    private final long DELAY_MS = 800;
+    private VideoView videoBG;
+    MediaPlayer mediaPlayer;
+    private final int count = 2;
+    private int index =1;
+    public  int mCurrentVideoPosition;
+    private final long DELAY_MS = 1000;
     private final long PERIOD_MS = 1000;
     private boolean exitWhenScrollNextPage =false;
     private ViewPager viewpager;
     private MaterialButton register,login,guestbtn;
     private List<ImageView>dots;
+    private ArrayList urlList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +46,7 @@ public class Intropage extends AppCompatActivity {
         login = findViewById(R.id.login);
         register=findViewById(R.id.Register);
         guestbtn=findViewById(R.id.guestlogin);
-
+        videoBG = (VideoView) findViewById(R.id.VideoView);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,15 +87,16 @@ public class Intropage extends AppCompatActivity {
             }
         });*/
         List<Introitem> mList = new ArrayList<>();
-        mList.add(new Introitem(R.drawable.introimage6));
-        mList.add(new Introitem(R.drawable.introimage1));
-        mList.add(new Introitem(R.drawable.introimage2));
-        mList.add(new Introitem(R.drawable.introimage3));
-        mList.add(new Introitem(R.drawable.introimage4));
-        mList.add(new Introitem(R.drawable.introimage5));
+        mList.add(new Introitem(R.drawable.imageinto1));
+        mList.add(new Introitem(R.drawable.imageintro2));
+        mList.add(new Introitem(R.drawable.imageintro3));
+        mList.add(new Introitem(R.drawable.imageintro5));
+        mList.add(new Introitem(R.drawable.imageintro6));
 
         viewpager = (ViewPager) findViewById(R.id.introviewpager);
         IntroAdapter introadapter = new IntroAdapter(this, mList);
+        videoBG();
+        visible();
         viewpager.setAdapter(introadapter);
         setupintroindicators();
         final Handler handler = new Handler();
@@ -135,7 +145,6 @@ public class Intropage extends AppCompatActivity {
                     exitWhenScrollNextPage = false;
 
                 }
-
             }
 
             @Override
@@ -174,10 +183,76 @@ public class Intropage extends AppCompatActivity {
         }
 
     }
+    private void visible(){
+        if (selectedPageIndex == 5){
+            register.setVisibility(View.VISIBLE);
+            login.setVisibility(View.VISIBLE);
+            guestbtn.setVisibility(View.VISIBLE);
+        }
+    }
+    private void videoBG(){
+        //build your video uri
+       Uri uri = Uri.parse("android.resource://"
+                +getPackageName()
+                +"/"
+                +R.raw.videobg4
+                );
+        Uri uri2 = Uri.parse("android.resource://"
+                +getPackageName()
+                +"/"
+                +R.raw.videobg4
+        );
+        videoBG.setVideoURI(uri);
+        videoBG.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mediaPlayer = mp;
+               mediaPlayer.setLooping(true);
+               if(mCurrentVideoPosition != 0){
+                    mediaPlayer.seekTo(mCurrentVideoPosition);
+                    mediaPlayer.start();
+                }
+                videoBG.start();
+
+            }
+        });
+    }
+    /*================================== important Section! =============================
+     we must override onPause(),onResume(), and onDestroy() to properly handle our
+     VideoView
+     */
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mCurrentVideoPosition = mediaPlayer.getCurrentPosition();
+        videoBG.pause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        videoBG.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mediaPlayer.release();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+
+
+
+    }
     /*private void setCurrentIntroIndicator(int index){
         int childcount = linearLayout.getChildCount();
         for (int i=0; i<childcount;i++){
-            ImageView imageView = (ImageView)linearLayout.getChildAt(i);
+           ImageView imageView = (ImageView)linearLayout.getChildAt(i);
             if(i == index){
                 imageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.intro_indicator_active));
             }else{
