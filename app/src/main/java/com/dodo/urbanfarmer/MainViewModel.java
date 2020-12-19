@@ -2,6 +2,7 @@ package com.dodo.urbanfarmer;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -61,7 +62,8 @@ public class MainViewModel extends ViewModel implements BottomNavigationView.OnN
                     fragment=new NetWorkFragment();
                     break;
                 case R.id.nav_add:
-                    fragment=new AddFragment();
+                    Intent i = new Intent(context,Add_activity.class);
+                    context.startActivity(i);
                     break;
                 case R.id.nav_Profile:
                     fragment=new ProfileFragment();
