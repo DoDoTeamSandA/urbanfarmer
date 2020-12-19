@@ -78,12 +78,13 @@ public class Intropage extends AppCompatActivity {
             }
         });*/
         List<Introitem> mList = new ArrayList<>();
-        mList.add(new Introitem(R.drawable.introimage6));
-        mList.add(new Introitem(R.drawable.introimage1));
-        mList.add(new Introitem(R.drawable.introimage2));
-        mList.add(new Introitem(R.drawable.introimage3));
-        mList.add(new Introitem(R.drawable.introimage4));
-        mList.add(new Introitem(R.drawable.introimage5));
+        mList.add(new Introitem(R.drawable.ic_baseline_date_range_24));
+        mList.add(new Introitem(R.drawable.ic_baseline_date_range_24));
+        mList.add(new Introitem(R.drawable.ic_baseline_date_range_24));
+        mList.add(new Introitem(R.drawable.ic_baseline_date_range_24));
+        mList.add(new Introitem(R.drawable.ic_baseline_date_range_24));
+        mList.add(new Introitem(R.drawable.ic_baseline_date_range_24));
+
 
         viewpager = (ViewPager) findViewById(R.id.introviewpager);
         IntroAdapter introadapter = new IntroAdapter(this, mList);
