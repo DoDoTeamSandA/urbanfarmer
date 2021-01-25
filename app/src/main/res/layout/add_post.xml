@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout>
+    <data>
+        <variable
+            name="AddPost"
+            type="com.dodo.urbanfarmer.AddViewModel" />
+    </data>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -35,6 +41,7 @@
                     android:textColor="#000"
                     android:textSize="20dp" />
                 <Spinner
+                    android:id="@+id/Spinner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:prompt="@array/spinner_list"/>
@@ -58,10 +65,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fillViewport="true">
-                <EditText
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <VideoView
+                        android:id="@+id/ThoughtVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
+                    <ImageView
+                        android:id="@+id/ThoughtImage"
+                        android:src="@drawable/ic_baseline_contact_support_24"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
+
+
+                    <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
+                    android:text="@={AddPost.thoghText}"
                     android:gravity="start"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
@@ -69,6 +92,8 @@
                     android:textCursorDrawable="@drawable/cursor_color"
                     android:maxLines="10"
                     android:hint="Write your thoughts!!!" />
+
+                </LinearLayout>
             </ScrollView>
 
 
@@ -83,11 +108,14 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout4">
 
-            <TextView
+            <EditText
+                android:id="@+id/Hashtag"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="#Add hashtag"
+                android:hint="#Add hashtag"
+                android:textColorHint="#0C0C0C"
+                android:text="@{AddPost.Addhashtag}"
                 android:textColor="#000"
                 android:textSize="20dp" />
 
@@ -102,6 +130,7 @@
             app:layout_constraintBottom_toBottomOf="parent">
 
             <ImageView
+                android:onClick="@{()->AddPost.AddThoughtPic(0)}"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="10dp"
@@ -109,6 +138,7 @@
                 android:src="@drawable/ic_baseline_camera_alt_24" />
 
             <ImageView
+                android:onClick="@{()->AddPost.AddThoughtPic(1)}"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="10dp"
@@ -120,13 +150,16 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
+                android:onClick="@{()->AddPost.getthoughtVideo(102)}"
                 android:src="@drawable/ic_baseline_motion_photos_on_24" />
 
             <ImageView
+                android:id="@+id/image"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
+                android:onClick="@{()->AddPost.uploadThoughData()}"
                 android:src="@drawable/ic_baseline_more_horiz_24" />
 
 
@@ -139,3 +172,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
+</layout>
