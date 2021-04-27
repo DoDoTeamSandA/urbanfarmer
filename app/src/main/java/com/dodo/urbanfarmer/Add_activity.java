@@ -18,8 +18,8 @@ import com.dodo.urbanfarmer.databinding.AddPostBinding;
 
 public class Add_activity extends AppCompatActivity {
       public   String[] privacy ={"Anyone","MyNetwork"};
-      private   AddPostBinding mAddPostBinder;
-      private   AddViewModel addViewModel;
+      private AddPostBinding mAddPostBinder;
+      private AddViewModel addViewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

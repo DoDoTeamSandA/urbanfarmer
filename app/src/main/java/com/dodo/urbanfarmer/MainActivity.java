@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         mainBinding.setMainViewModel(mainViewModel);
 
 
+
         mAuth = FirebaseAuth.getInstance();
 
         //Actionbar Support
